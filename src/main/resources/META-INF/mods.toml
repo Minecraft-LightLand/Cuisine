@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="All rights reserved"
+[[mods]]
+modId="cuisine"
+version="0.0.1" #mandatory
+displayName="Cuisine" #mandatory
+logoFile="cuisine.png" #optional
+credits="Thanks for this example mod goes to Java" #optional
+authors="Love, Cheese and small house plants" #optional
+description='''
+'''
+[[dependencies.cuisine]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.cuisine]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.cuisine]]
+    modId="l2library"
+    mandatory=true
+    versionRange="[0.0.2,)"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.cuisine]]
+    modId="geckolib3"
+    mandatory=true
+    versionRange="[3.0.0,)"
+    ordering="AFTER"
+[[dependencies.cuisine]]
+    modId="jei"
+    mandatory=true
+    versionRange="[9.7,)"
+    side="CLIENT"
