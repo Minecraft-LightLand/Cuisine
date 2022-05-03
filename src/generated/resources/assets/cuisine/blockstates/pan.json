@@ -1,0 +1,12 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "lit": "true"
+      },
+      "apply": {
+        "model": "cuisine:block/pan_lit"
+      }
+    }
+  ]
+}

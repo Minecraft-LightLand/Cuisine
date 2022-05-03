@@ -1,0 +1,11 @@
+{
+  "fluid_ingredient": {
+    "fluid": "cuisine:flowing_sugarcane_juice",
+    "amount": 250
+  },
+  "result": {
+    "item": "cuisine:unrefined_sugar"
+  },
+  "time": 100,
+  "type": "cuisine:basin_dry"
+}

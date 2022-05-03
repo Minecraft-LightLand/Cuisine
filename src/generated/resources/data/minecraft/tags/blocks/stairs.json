@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:fruittree_stairs",
+    "cuisine:empowered_stairs",
+    "cuisine:mystic_stairs"
+  ]
+}

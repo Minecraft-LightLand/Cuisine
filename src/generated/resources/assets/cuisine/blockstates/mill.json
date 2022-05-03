@@ -1,0 +1,14 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "cuisine:block/mill"
+      }
+    },
+    {
+      "apply": {
+        "model": "cuisine:block/mill_top"
+      }
+    }
+  ]
+}

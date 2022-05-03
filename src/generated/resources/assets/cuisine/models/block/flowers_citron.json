@@ -1,0 +1,6 @@
+{
+  "parent": "cuisine:block/flowers",
+  "textures": {
+    "0": "cuisine:block/flowers_citron"
+  }
+}

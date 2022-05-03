@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:shredded_chicken",
+    "cuisine:shredded_pork",
+    "cuisine:shredded_beef",
+    "cuisine:shredded_mutton",
+    "cuisine:shredded_rabbit",
+    "cuisine:shredded_salmon",
+    "cuisine:shredded_cod"
+  ]
+}

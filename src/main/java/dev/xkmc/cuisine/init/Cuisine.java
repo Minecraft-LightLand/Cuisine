@@ -1,7 +1,5 @@
 package dev.xkmc.cuisine.init;
 
-import dev.hikarishima.lightland.init.LightLand;
-import dev.xkmc.l2library.base.LcyRegistrate;
 import dev.xkmc.cuisine.content.misc.CuisineBottleItem;
 import dev.xkmc.cuisine.content.tools.base.tile.TileInfoOverlay;
 import dev.xkmc.cuisine.content.veges.CornBlock;
@@ -10,20 +8,23 @@ import dev.xkmc.cuisine.init.data.LangData;
 import dev.xkmc.cuisine.init.data.RecipeGen;
 import dev.xkmc.cuisine.init.data.WoodType;
 import dev.xkmc.cuisine.init.registrate.*;
+import dev.xkmc.l2library.base.LcyRegistrate;
 import dev.xkmc.l2library.repack.registrate.providers.ProviderType;
 import net.minecraftforge.client.gui.ForgeIngameGui;
 import net.minecraftforge.client.gui.OverlayRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
+@Mod(Cuisine.MODID)
 public class Cuisine {
 
-	public static final String MODID = LightLand.MODID;
-	public static final LcyRegistrate REGISTRATE = LightLand.REGISTRATE;
+	public static final String MODID = "cuisine";
+	public static final LcyRegistrate REGISTRATE = new LcyRegistrate(MODID);
 
 	public Cuisine() {
 		CuisineBlocks.register();

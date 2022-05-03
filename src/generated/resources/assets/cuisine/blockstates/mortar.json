@@ -1,0 +1,14 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "cuisine:block/mortar"
+      }
+    },
+    {
+      "apply": {
+        "model": "cuisine:block/pestle"
+      }
+    }
+  ]
+}

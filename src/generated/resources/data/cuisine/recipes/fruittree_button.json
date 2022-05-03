@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cuisine:fruittree_planks"
+    }
+  ],
+  "result": {
+    "item": "cuisine:fruittree_button"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "cuisine:block/leaves_grapefruit"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": {
+        "model": "cuisine:block/flowers_grapefruit"
+      }
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": {
+        "model": "cuisine:block/fruit_lg"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cuisine:mortar/rice_powder"
+    ]
+  },
+  "criteria": {
+    "has_white_rice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cuisine:white_rice"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cuisine:mortar/rice_powder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_rice",
+      "has_the_recipe"
+    ]
+  ]
+}

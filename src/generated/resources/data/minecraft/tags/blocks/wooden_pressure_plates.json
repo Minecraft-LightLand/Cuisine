@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:fruittree_pressure_plate",
+    "cuisine:empowered_pressure_plate",
+    "cuisine:mystic_pressure_plate"
+  ]
+}

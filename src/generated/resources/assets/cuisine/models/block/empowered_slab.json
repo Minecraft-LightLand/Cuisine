@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "cuisine:block/empowered_planks",
+    "bottom": "cuisine:block/empowered_planks",
+    "top": "cuisine:block/empowered_planks"
+  }
+}

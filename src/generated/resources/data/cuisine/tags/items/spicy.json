@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:chili",
+    "cuisine:green_pepper",
+    "cuisine:red_pepper"
+  ]
+}

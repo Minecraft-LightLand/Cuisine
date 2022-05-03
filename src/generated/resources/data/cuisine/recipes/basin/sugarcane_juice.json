@@ -1,0 +1,11 @@
+{
+  "item_ingredients": {
+    "item": "minecraft:sugar_cane"
+  },
+  "remain": {
+    "fluid": "cuisine:flowing_sugarcane_juice",
+    "amount": 250
+  },
+  "step": 5,
+  "type": "cuisine:basin"
+}

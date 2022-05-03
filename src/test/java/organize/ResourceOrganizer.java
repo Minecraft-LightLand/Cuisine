@@ -30,7 +30,7 @@ public abstract class ResourceOrganizer {
         new ItemFileOrganizer();
         new BlockFileOrganizer();
         new AssetMisc();
-        new ConfigFileOrganizer();
+        //new ConfigFileOrganizer();
         new GeckoMisc();
         File f = new File("./src/test/resources");
         for (File fi : f.listFiles()) {

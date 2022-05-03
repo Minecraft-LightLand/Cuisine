@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:sliced_chicken",
+    "cuisine:sliced_pork",
+    "cuisine:sliced_beef",
+    "cuisine:sliced_mutton",
+    "cuisine:sliced_rabbit",
+    "cuisine:sliced_salmon",
+    "cuisine:sliced_cod"
+  ]
+}

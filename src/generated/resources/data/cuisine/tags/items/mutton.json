@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_mutton",
+    "cuisine:minced_mutton",
+    "cuisine:shredded_mutton",
+    "cuisine:sliced_mutton",
+    "cuisine:diced_mutton",
+    "cuisine:cubed_mutton"
+  ]
+}

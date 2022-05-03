@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cuisine:fire_pit_with_sticks"
+    ]
+  },
+  "criteria": {
+    "has_fire_pit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cuisine:fire_pit"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cuisine:fire_pit_with_sticks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_fire_pit",
+      "has_the_recipe"
+    ]
+  ]
+}

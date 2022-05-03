@@ -1,0 +1,25 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "cuisine:block/leaves_mandarin"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": {
+        "model": "cuisine:block/flowers_mandarin"
+      }
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": {
+        "model": "cuisine:block/fruit_sm"
+      }
+    }
+  ]
+}

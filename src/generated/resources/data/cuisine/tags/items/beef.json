@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_beef",
+    "cuisine:minced_beef",
+    "cuisine:shredded_beef",
+    "cuisine:sliced_beef",
+    "cuisine:diced_beef",
+    "cuisine:cubed_beef"
+  ]
+}

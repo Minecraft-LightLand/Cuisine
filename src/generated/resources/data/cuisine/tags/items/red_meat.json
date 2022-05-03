@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_beef",
+    "cuisine:minced_beef",
+    "cuisine:shredded_beef",
+    "cuisine:sliced_beef",
+    "cuisine:diced_beef",
+    "cuisine:cubed_beef",
+    "cuisine:paste_mutton",
+    "cuisine:minced_mutton",
+    "cuisine:shredded_mutton",
+    "cuisine:sliced_mutton",
+    "cuisine:diced_mutton",
+    "cuisine:cubed_mutton"
+  ]
+}

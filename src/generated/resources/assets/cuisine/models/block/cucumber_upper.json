@@ -1,0 +1,6 @@
+{
+  "parent": "cuisine:block/upper_crop",
+  "textures": {
+    "crop": "cuisine:block/cucumber_upper_1"
+  }
+}

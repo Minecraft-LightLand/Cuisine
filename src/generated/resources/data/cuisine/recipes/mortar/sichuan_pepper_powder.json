@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "cuisine:sichuan_pepper"
+  },
+  "result": {
+    "item": "cuisine:sichuan_pepper_powder"
+  },
+  "step": 5,
+  "type": "cuisine:mortar"
+}

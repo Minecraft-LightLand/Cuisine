@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "cuisine:rice"
+  },
+  "result": {
+    "item": "cuisine:white_rice"
+  },
+  "step": 5,
+  "type": "cuisine:mortar"
+}

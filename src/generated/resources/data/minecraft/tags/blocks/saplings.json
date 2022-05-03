@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:sapling_citron",
+    "cuisine:sapling_grapefruit",
+    "cuisine:sapling_lemon",
+    "cuisine:sapling_lime",
+    "cuisine:sapling_mandarin",
+    "cuisine:sapling_orange",
+    "cuisine:sapling_pomelo"
+  ]
+}

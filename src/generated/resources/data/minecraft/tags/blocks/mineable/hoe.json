@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:leaves_citron",
+    "cuisine:leaves_grapefruit",
+    "cuisine:leaves_lemon",
+    "cuisine:leaves_lime",
+    "cuisine:leaves_mandarin",
+    "cuisine:leaves_orange",
+    "cuisine:leaves_pomelo"
+  ]
+}

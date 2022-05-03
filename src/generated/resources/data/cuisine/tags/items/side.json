@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:chili",
+    "cuisine:garlic",
+    "cuisine:ginger",
+    "cuisine:onion",
+    "cuisine:scallion",
+    "cuisine:sesame",
+    "minecraft:nether_wart",
+    "minecraft:warped_fungus",
+    "minecraft:crimson_fungus",
+    "minecraft:spider_eye",
+    "minecraft:bone",
+    "minecraft:honeycomb",
+    "minecraft:cocoa_beans"
+  ]
+}

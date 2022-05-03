@@ -1,0 +1,15 @@
+{
+  "fluid_ingredient": {
+    "fluid": "minecraft:water",
+    "amount": 50
+  },
+  "item_ingredients": {
+    "item": "cuisine:soybean"
+  },
+  "remain": {
+    "fluid": "cuisine:flowing_soy_milk",
+    "amount": 50
+  },
+  "step": 4,
+  "type": "cuisine:mill"
+}

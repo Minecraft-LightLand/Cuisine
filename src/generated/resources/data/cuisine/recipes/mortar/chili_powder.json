@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "cuisine:chili"
+  },
+  "result": {
+    "item": "cuisine:chili_powder"
+  },
+  "step": 5,
+  "type": "cuisine:mortar"
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cuisine:mortar/chili_powder"
+    ]
+  },
+  "criteria": {
+    "has_chili": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cuisine:chili"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cuisine:mortar/chili_powder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_chili",
+      "has_the_recipe"
+    ]
+  ]
+}

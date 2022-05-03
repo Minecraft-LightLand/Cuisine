@@ -1,0 +1,25 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "cuisine:block/leaves_pomelo"
+      }
+    },
+    {
+      "when": {
+        "age": "2"
+      },
+      "apply": {
+        "model": "cuisine:block/flowers_pomelo"
+      }
+    },
+    {
+      "when": {
+        "age": "3"
+      },
+      "apply": {
+        "model": "cuisine:block/fruit_lg"
+      }
+    }
+  ]
+}

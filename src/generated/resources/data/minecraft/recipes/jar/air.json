@@ -1,0 +1,20 @@
+{
+  "fluid_ingredient": {
+    "fluid": "minecraft:water",
+    "amount": 1000
+  },
+  "item_ingredients": [
+    {
+      "tag": "cuisine:fruit"
+    }
+  ],
+  "remain": {
+    "fluid": "cuisine:flowing_fruit_vinegar",
+    "amount": 250
+  },
+  "result": {
+    "item": "minecraft:air"
+  },
+  "time": 100,
+  "type": "cuisine:jar"
+}

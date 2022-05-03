@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_cod",
+    "cuisine:minced_cod",
+    "cuisine:shredded_cod",
+    "cuisine:sliced_cod",
+    "cuisine:diced_cod",
+    "cuisine:cubed_cod"
+  ]
+}

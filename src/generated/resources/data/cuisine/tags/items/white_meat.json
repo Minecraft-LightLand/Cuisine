@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_chicken",
+    "cuisine:minced_chicken",
+    "cuisine:shredded_chicken",
+    "cuisine:sliced_chicken",
+    "cuisine:diced_chicken",
+    "cuisine:cubed_chicken",
+    "cuisine:paste_pork",
+    "cuisine:minced_pork",
+    "cuisine:shredded_pork",
+    "cuisine:sliced_pork",
+    "cuisine:diced_pork",
+    "cuisine:cubed_pork",
+    "cuisine:paste_rabbit",
+    "cuisine:minced_rabbit",
+    "cuisine:shredded_rabbit",
+    "cuisine:sliced_rabbit",
+    "cuisine:diced_rabbit",
+    "cuisine:cubed_rabbit"
+  ]
+}

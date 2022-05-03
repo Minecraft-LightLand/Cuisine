@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "side": "cuisine:block/fruittree_planks",
+    "bottom": "cuisine:block/fruittree_planks",
+    "top": "cuisine:block/fruittree_planks"
+  }
+}

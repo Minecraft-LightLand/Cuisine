@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "W": {
+      "item": "cuisine:mystic_planks"
+    },
+    "#": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "cuisine:mystic_fence",
+    "count": 3
+  }
+}

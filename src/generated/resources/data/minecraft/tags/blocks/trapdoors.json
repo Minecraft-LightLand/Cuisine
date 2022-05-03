@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:fruittree_trapdoor",
+    "cuisine:empowered_trapdoor",
+    "cuisine:mystic_trapdoor"
+  ]
+}

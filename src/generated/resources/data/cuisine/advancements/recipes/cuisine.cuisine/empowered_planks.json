@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cuisine:empowered_planks"
+    ]
+  },
+  "criteria": {
+    "has_empowered_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cuisine:empowered_log"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cuisine:empowered_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_empowered_log",
+      "has_the_recipe"
+    ]
+  ]
+}

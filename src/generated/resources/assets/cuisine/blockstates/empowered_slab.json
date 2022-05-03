@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "cuisine:block/empowered_slab_top"
+    },
+    "type=bottom": {
+      "model": "cuisine:block/empowered_slab"
+    },
+    "type=double": {
+      "model": "cuisine:block/empowered_planks"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "bottom": "cuisine:block/mystic_door_lower",
+    "top": "cuisine:block/mystic_door_upper"
+  }
+}

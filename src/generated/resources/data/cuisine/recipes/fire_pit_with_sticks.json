@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "fire_pit_with_stick",
+  "pattern": [
+    " C ",
+    "CAC"
+  ],
+  "key": {
+    "A": {
+      "item": "cuisine:fire_pit"
+    },
+    "C": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "cuisine:fire_pit_with_sticks"
+  }
+}

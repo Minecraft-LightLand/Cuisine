@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_pork",
+    "cuisine:minced_pork",
+    "cuisine:shredded_pork",
+    "cuisine:sliced_pork",
+    "cuisine:diced_pork",
+    "cuisine:cubed_pork"
+  ]
+}

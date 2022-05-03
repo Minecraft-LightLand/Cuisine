@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:citron",
+    "cuisine:lemon",
+    "cuisine:lime",
+    "cuisine:mandarin",
+    "cuisine:orange"
+  ]
+}

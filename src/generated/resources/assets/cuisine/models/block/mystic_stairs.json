@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "cuisine:block/mystic_planks",
+    "bottom": "cuisine:block/mystic_planks",
+    "top": "cuisine:block/mystic_planks"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "cuisine:empowered_planks"
+    }
+  },
+  "result": {
+    "item": "cuisine:empowered_pressure_plate"
+  }
+}

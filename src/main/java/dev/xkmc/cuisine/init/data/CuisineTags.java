@@ -185,7 +185,7 @@ public class CuisineTags {
 					.addTag(tag));
 		}
 
-		public void includeIn(com.simibubi.create.AllTags.AllFluidTags parent) {
+		public void includeIn(CuisineTags.AllFluidTags parent) {
 			includeIn(parent.tag);
 		}
 

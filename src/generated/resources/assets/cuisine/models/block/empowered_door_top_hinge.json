@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_rh",
+  "textures": {
+    "bottom": "cuisine:block/empowered_door_lower",
+    "top": "cuisine:block/empowered_door_upper"
+  }
+}

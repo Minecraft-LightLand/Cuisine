@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:diced_chicken",
+    "cuisine:diced_pork",
+    "cuisine:diced_beef",
+    "cuisine:diced_mutton",
+    "cuisine:diced_rabbit",
+    "cuisine:diced_salmon",
+    "cuisine:diced_cod"
+  ]
+}

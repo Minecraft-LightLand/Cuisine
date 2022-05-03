@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_chicken",
+    "cuisine:paste_pork",
+    "cuisine:paste_beef",
+    "cuisine:paste_mutton",
+    "cuisine:paste_rabbit",
+    "cuisine:paste_salmon",
+    "cuisine:paste_cod"
+  ]
+}

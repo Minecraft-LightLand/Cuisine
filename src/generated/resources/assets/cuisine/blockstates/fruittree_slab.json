@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "cuisine:block/fruittree_slab_top"
+    },
+    "type=bottom": {
+      "model": "cuisine:block/fruittree_slab"
+    },
+    "type=double": {
+      "model": "cuisine:block/fruittree_planks"
+    }
+  }
+}

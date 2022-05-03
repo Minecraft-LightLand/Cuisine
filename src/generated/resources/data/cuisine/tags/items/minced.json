@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:minced_chicken",
+    "cuisine:minced_pork",
+    "cuisine:minced_beef",
+    "cuisine:minced_mutton",
+    "cuisine:minced_rabbit",
+    "cuisine:minced_salmon",
+    "cuisine:minced_cod"
+  ]
+}

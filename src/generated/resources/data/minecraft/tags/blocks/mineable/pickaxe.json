@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:pan",
+    "cuisine:jar",
+    "cuisine:basin",
+    "cuisine:mill",
+    "cuisine:mortar",
+    "cuisine:fire_pit",
+    "cuisine:fire_pit_with_sticks",
+    "cuisine:wok",
+    "cuisine:fire_pit_with_wok"
+  ]
+}

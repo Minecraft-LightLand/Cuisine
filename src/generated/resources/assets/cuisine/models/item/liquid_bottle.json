@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cuisine:item/liquid_bottle_0",
+    "layer1": "cuisine:item/liquid_bottle_base"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cuisine:amount": 0.1
+      },
+      "model": "cuisine:item/liquid_bottle_1"
+    },
+    {
+      "predicate": {
+        "cuisine:amount": 0.3
+      },
+      "model": "cuisine:item/liquid_bottle_2"
+    },
+    {
+      "predicate": {
+        "cuisine:amount": 0.5
+      },
+      "model": "cuisine:item/liquid_bottle_3"
+    },
+    {
+      "predicate": {
+        "cuisine:amount": 0.7
+      },
+      "model": "cuisine:item/liquid_bottle_4"
+    },
+    {
+      "predicate": {
+        "cuisine:amount": 0.9
+      },
+      "model": "cuisine:item/liquid_bottle_5"
+    }
+  ]
+}

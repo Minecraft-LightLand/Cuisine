@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cuisine:empowered_planks"
+    }
+  ],
+  "result": {
+    "item": "cuisine:empowered_button"
+  }
+}

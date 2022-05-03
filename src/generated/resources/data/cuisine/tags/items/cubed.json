@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:cubed_chicken",
+    "cuisine:cubed_pork",
+    "cuisine:cubed_beef",
+    "cuisine:cubed_mutton",
+    "cuisine:cubed_rabbit",
+    "cuisine:cubed_salmon",
+    "cuisine:cubed_cod"
+  ]
+}

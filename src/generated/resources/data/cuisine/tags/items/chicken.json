@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_chicken",
+    "cuisine:minced_chicken",
+    "cuisine:shredded_chicken",
+    "cuisine:sliced_chicken",
+    "cuisine:diced_chicken",
+    "cuisine:cubed_chicken"
+  ]
+}

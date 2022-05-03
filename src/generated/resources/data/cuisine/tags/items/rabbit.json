@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_rabbit",
+    "cuisine:minced_rabbit",
+    "cuisine:shredded_rabbit",
+    "cuisine:sliced_rabbit",
+    "cuisine:diced_rabbit",
+    "cuisine:cubed_rabbit"
+  ]
+}

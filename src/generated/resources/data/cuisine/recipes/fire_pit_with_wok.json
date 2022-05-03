@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "fire_pit_with_wok",
+  "ingredients": [
+    {
+      "item": "cuisine:wok"
+    },
+    {
+      "item": "cuisine:fire_pit"
+    }
+  ],
+  "result": {
+    "item": "cuisine:fire_pit_with_wok"
+  }
+}

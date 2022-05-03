@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:fruittree_fence_gate",
+    "cuisine:empowered_fence_gate",
+    "cuisine:mystic_fence_gate"
+  ]
+}

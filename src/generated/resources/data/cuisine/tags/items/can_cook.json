@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#cuisine:staple",
+    "#cuisine:meat",
+    "#cuisine:veges",
+    "#cuisine:fruit",
+    "#cuisine:side",
+    "#cuisine:condiment"
+  ]
+}

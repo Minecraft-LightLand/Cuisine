@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "cuisine:mystic_planks"
+    }
+  ],
+  "result": {
+    "item": "cuisine:mystic_button"
+  }
+}

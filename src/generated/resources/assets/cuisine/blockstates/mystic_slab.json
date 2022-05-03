@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "cuisine:block/mystic_slab_top"
+    },
+    "type=bottom": {
+      "model": "cuisine:block/mystic_slab"
+    },
+    "type=double": {
+      "model": "cuisine:block/mystic_planks"
+    }
+  }
+}

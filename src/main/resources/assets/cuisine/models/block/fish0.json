@@ -1,0 +1,20 @@
+{
+  "parent": "block/block",
+  "loader": "forge:obj",
+  "flip-v": true,
+  "model": "cuisine:models/block/fish0.obj",
+  "textures": {
+    "plate": "minecraft:block/quartz_block_bottom",
+    "particle": "minecraft:block/quartz_block_bottom",
+    "beef": "cuisine:misc/beef",
+    "fish_soup": "cuisine:misc/fish_soup",
+    "fish": "cuisine:misc/fish",
+    "lime_vege": "cuisine:misc/lime_vege",
+    "meat_soup": "cuisine:misc/meat_soup",
+    "red_deco": "cuisine:misc/red_deco",
+    "rice": "cuisine:misc/rice",
+    "vege": "cuisine:misc/vege",
+    "veges_soup": "cuisine:misc/veges_soup",
+    "yellow_deco": "cuisine:misc/yellow_deco"
+  }
+}

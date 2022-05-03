@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:chinese_cabbage",
+    "cuisine:cucumber",
+    "cuisine:eggplant",
+    "cuisine:green_pepper",
+    "cuisine:leek",
+    "cuisine:lettuce",
+    "cuisine:red_pepper",
+    "cuisine:spinach",
+    "cuisine:tomato",
+    "cuisine:turnip",
+    "minecraft:carrot",
+    "minecraft:kelp",
+    "minecraft:dried_kelp",
+    "minecraft:seagrass",
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "minecraft:pumpkin",
+    "minecraft:pumpkin_seeds",
+    "minecraft:bamboo"
+  ]
+}

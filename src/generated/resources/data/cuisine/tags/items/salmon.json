@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:paste_salmon",
+    "cuisine:minced_salmon",
+    "cuisine:shredded_salmon",
+    "cuisine:sliced_salmon",
+    "cuisine:diced_salmon",
+    "cuisine:cubed_salmon"
+  ]
+}

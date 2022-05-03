@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:grapefruit",
+    "cuisine:mandarin",
+    "cuisine:orange",
+    "cuisine:pomelo",
+    "minecraft:apple",
+    "minecraft:melon_slice",
+    "minecraft:sugar_cane",
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries",
+    "minecraft:sugar",
+    "minecraft:honeycomb",
+    "minecraft:cocoa_beans"
+  ]
+}

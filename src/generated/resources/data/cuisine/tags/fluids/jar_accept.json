@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:flowing_cuisine_juice",
+    "cuisine:cuisine_juice",
+    "cuisine:flowing_edible_oil",
+    "cuisine:edible_oil",
+    "cuisine:flowing_fruit_vinegar",
+    "cuisine:fruit_vinegar",
+    "cuisine:flowing_rice_vinegar",
+    "cuisine:rice_vinegar",
+    "cuisine:flowing_sesame_oil",
+    "cuisine:sesame_oil",
+    "cuisine:flowing_soy_milk",
+    "cuisine:soy_milk",
+    "cuisine:flowing_soy_sauce",
+    "cuisine:soy_sauce",
+    "cuisine:flowing_sugarcane_juice",
+    "cuisine:sugarcane_juice",
+    "minecraft:water",
+    "#forge:milk",
+    "#forge:chocolate",
+    "#forge:tea",
+    "#forge:honey"
+  ]
+}

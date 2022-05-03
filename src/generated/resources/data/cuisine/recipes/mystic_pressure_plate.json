@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "cuisine:mystic_planks"
+    }
+  },
+  "result": {
+    "item": "cuisine:mystic_pressure_plate"
+  }
+}

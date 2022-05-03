@@ -1,0 +1,47 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "lit": "true"
+      },
+      "apply": {
+        "model": "cuisine:block/pan_lit"
+      }
+    },
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "cuisine:block/fire_pit_with_wok",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "cuisine:block/fire_pit_with_wok",
+        "y": 270
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "cuisine:block/fire_pit_with_wok"
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "cuisine:block/fire_pit_with_wok",
+        "y": 90
+      }
+    }
+  ]
+}

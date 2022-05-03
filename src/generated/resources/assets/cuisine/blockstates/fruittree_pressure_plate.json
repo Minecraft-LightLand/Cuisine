@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "cuisine:block/fruittree_pressure_plate"
+    },
+    "powered=true": {
+      "model": "cuisine:block/fruittree_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "cuisine:corn",
+    "cuisine:peanut",
+    "cuisine:rice",
+    "cuisine:soybean",
+    "minecraft:potato",
+    "minecraft:beetroot"
+  ]
+}

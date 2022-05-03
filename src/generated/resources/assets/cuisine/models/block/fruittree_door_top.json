@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "bottom": "cuisine:block/fruittree_door_lower",
+    "top": "cuisine:block/fruittree_door_upper"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "side": "cuisine:block/empowered_log",
+    "end": "cuisine:block/empowered_log_top"
+  }
+}

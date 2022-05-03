@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "cuisine:fruittree_log"
+    }
+  ],
+  "result": {
+    "item": "cuisine:fruittree_planks",
+    "count": 4
+  }
+}
