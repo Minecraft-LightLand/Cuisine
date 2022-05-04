@@ -5,7 +5,7 @@
         "lit": "true"
       },
       "apply": {
-        "model": "cuisine:block/pan_lit"
+        "model": "cuisine:block/fire"
       }
     },
     {

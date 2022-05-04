@@ -30,6 +30,7 @@
     "cuisine:mystic_button",
     "cuisine:mystic_pressure_plate",
     "cuisine:mystic_fence",
-    "cuisine:mystic_fence_gate"
+    "cuisine:mystic_fence_gate",
+    "cuisine:chopping_board"
   ]
 }

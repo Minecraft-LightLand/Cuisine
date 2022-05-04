@@ -26,10 +26,12 @@ public class AddOneItem implements TileClick<CuisineTile<?>> {
 			}
 			ItemStack copy = stack.copy();
 			copy.setCount(1);
-			ItemStack remain = tile.getMainInventory().addItem(copy);
-			if (remain.isEmpty()) {
-				stack.shrink(1);
-				return InteractionResult.SUCCESS;
+			if (tile.getMainInventory().canAddItem(copy)) {
+				ItemStack remain = tile.getMainInventory().addItem(copy);
+				if (remain.isEmpty()) {
+					stack.shrink(1);
+					return InteractionResult.SUCCESS;
+				}
 			}
 			return InteractionResult.CONSUME;
 		}

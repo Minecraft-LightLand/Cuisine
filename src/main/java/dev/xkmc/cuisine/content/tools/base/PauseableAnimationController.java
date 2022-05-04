@@ -1,29 +1,30 @@
-package dev.xkmc.cuisine.content.tools.mill;
+package dev.xkmc.cuisine.content.tools.base;
 
+import dev.xkmc.cuisine.content.tools.base.tile.AnimatePauseTile;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
 import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 
-public class MillAnimationController extends AnimationController<MillBlockEntity> {
+public class PauseableAnimationController<T extends AnimatePauseTile> extends AnimationController<T> {
 
 	private double last_tick = 0, frame = 0;
 	private boolean paused = true;
 
-	public MillAnimationController(MillBlockEntity animatable) {
-		super(animatable, "main", 0, MillAnimationController::test);
+	public PauseableAnimationController(T animatable) {
+		super(animatable, "main", 0, PauseableAnimationController::test);
 	}
 
-	private static PlayState test(AnimationEvent<MillBlockEntity> event) {
-		if (event.getController() instanceof MillAnimationController controller) {
+	private static <T extends AnimatePauseTile> PlayState test(AnimationEvent<T> event) {
+		if (event.getController() instanceof PauseableAnimationController controller) {
 			controller.setAnimation(new AnimationBuilder().addAnimation("rotate", true));
 			controller.testFrame(event.getAnimatable());
 		}
 		return PlayState.CONTINUE;
 	}
 
-	private void testFrame(MillBlockEntity te) {
-		paused = te.rotate_time == 0;
+	private void testFrame(T te) {
+		paused = te.rotateTime() == 0;
 	}
 
 	@Override

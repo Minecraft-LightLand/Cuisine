@@ -1,7 +1,7 @@
 package dev.xkmc.cuisine.content.tools.base;
 
-import dev.xkmc.l2library.base.BaseContainer;
 import dev.xkmc.cuisine.content.tools.base.tile.CuisineTile;
+import dev.xkmc.l2library.base.BaseContainer;
 
 public class RecipeContainer<T extends CuisineTile<T>> extends BaseContainer<RecipeContainer<T>> {
 

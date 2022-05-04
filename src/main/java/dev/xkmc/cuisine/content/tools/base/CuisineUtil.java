@@ -47,8 +47,11 @@ public class CuisineUtil {
 		player.getInventory().placeItemBackInInventory(stack);
 	}
 
-
+	/**
+	 * handles creative check
+	 */
 	public static void hurtAndBreak(Player pl, ItemStack stack, InteractionHand hand) {
+		if (pl.isCreative()) return;
 		stack.hurtAndBreak(1, pl, (player) -> player.broadcastBreakEvent(hand));
 	}
 }

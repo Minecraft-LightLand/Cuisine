@@ -33,7 +33,7 @@ public class BasinDryRecipe extends CuisineRecipe<BasinDryRecipe, BasinBlockEnti
 			boolean match = !stack.isEmpty() && stack.isFluidEqual(fluid_ingredient) && stack.getAmount() >= fluid_ingredient.getAmount();
 			if (!match)
 				return false;
-			return inv.getTile().inventory.canAddItem(result);
+			return inv.getTile().inventory.canRecipeAddItem(result);
 		}
 		return false;
 	}

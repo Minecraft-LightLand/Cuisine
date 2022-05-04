@@ -1,17 +1,12 @@
 package dev.xkmc.cuisine.init.registrate;
 
-import dev.xkmc.l2library.repack.registrate.providers.DataGenContext;
-import dev.xkmc.l2library.repack.registrate.providers.RegistrateBlockstateProvider;
-import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntityEntry;
-import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntry;
-import dev.xkmc.l2library.block.BlockProxy;
-import dev.xkmc.l2library.block.DelegateBlock;
-import dev.xkmc.l2library.block.DelegateBlockProperties;
-import dev.xkmc.l2library.util.LootTableTemplate;
 import dev.xkmc.cuisine.content.tools.base.CuisineUtil;
 import dev.xkmc.cuisine.content.tools.basin.BasinBlock;
 import dev.xkmc.cuisine.content.tools.basin.BasinBlockEntity;
 import dev.xkmc.cuisine.content.tools.basin.BasinRenderer;
+import dev.xkmc.cuisine.content.tools.board.ChoppingBoardBlock;
+import dev.xkmc.cuisine.content.tools.board.ChoppingBoardBlockEntity;
+import dev.xkmc.cuisine.content.tools.board.ChoppingBoardRenderer;
 import dev.xkmc.cuisine.content.tools.firepit.FirePitBlock;
 import dev.xkmc.cuisine.content.tools.firepit.stick.FirePitStickBlockEntity;
 import dev.xkmc.cuisine.content.tools.firepit.stick.FirePitStickRenderer;
@@ -32,6 +27,14 @@ import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.data.CuisineCropType;
 import dev.xkmc.cuisine.init.data.CuisineTreeType;
 import dev.xkmc.cuisine.init.data.WoodType;
+import dev.xkmc.l2library.block.BlockProxy;
+import dev.xkmc.l2library.block.DelegateBlock;
+import dev.xkmc.l2library.block.DelegateBlockProperties;
+import dev.xkmc.l2library.repack.registrate.providers.DataGenContext;
+import dev.xkmc.l2library.repack.registrate.providers.RegistrateBlockstateProvider;
+import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntityEntry;
+import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntry;
+import dev.xkmc.l2library.util.LootTableTemplate;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -54,7 +57,7 @@ public class CuisineBlocks {
 	}
 
 	public static final BlockEntry<DelegateBlock> PAN, JAR, BASIN, MILL, MORTAR,
-			FIRE_PIT, FIRE_PIT_STICK, FIRE_PIT_WOK, WOK;
+			FIRE_PIT, FIRE_PIT_STICK, FIRE_PIT_WOK, WOK, BOARD;
 
 	public static final BlockEntityEntry<PanBlockEntity> TE_PAN;
 	public static final BlockEntityEntry<JarBlockEntity> TE_JAR;
@@ -63,6 +66,7 @@ public class CuisineBlocks {
 	public static final BlockEntityEntry<MortarBlockEntity> TE_MORTAR;
 	public static final BlockEntityEntry<FirePitStickBlockEntity> TE_STICK;
 	public static final BlockEntityEntry<FirePitWokBlockEntity> TE_WOK;
+	public static final BlockEntityEntry<ChoppingBoardBlockEntity> TE_BOARD;
 
 	static {
 		CuisineCropType.register();
@@ -71,11 +75,12 @@ public class CuisineBlocks {
 
 		// basic tools
 		DelegateBlockProperties prop = DelegateBlockProperties.copy(Blocks.STONE).make(BlockBehaviour.Properties::noOcclusion);
+		DelegateBlockProperties wood = DelegateBlockProperties.copy(Blocks.OAK_PLANKS).make(BlockBehaviour.Properties::noOcclusion);
 		{
 			PAN = REGISTRATE.block("pan", p -> DelegateBlock.newBaseBlock(prop,
 							PanBlock.TE, new PanBlock(), CuisineUtil.FIRE, CuisineUtil.TAKE, CuisineUtil.LID, CuisineUtil.DUMP, CuisineUtil.ADD))
 					.item().defaultModel().build().blockstate((ctx, pvd) -> pvd.getMultipartBuilder(ctx.getEntry()).part()
-							.modelFile(new ModelFile.UncheckedModelFile(new ResourceLocation(Cuisine.MODID, "block/pan_lit")))
+							.modelFile(new ModelFile.UncheckedModelFile(new ResourceLocation(Cuisine.MODID, "block/fire")))
 							.addModel().condition(BlockStateProperties.LIT, true).end()).addLayer(() -> RenderType::cutout)
 					.defaultLoot().tag(BlockTags.MINEABLE_WITH_PICKAXE).defaultLang().register();
 			TE_PAN = REGISTRATE.blockEntity("pan", PanBlockEntity::new).validBlock(PAN)
@@ -124,6 +129,16 @@ public class CuisineBlocks {
 					}).item().defaultModel().build()
 					.tag(BlockTags.MINEABLE_WITH_PICKAXE).item().defaultModel().build().register();
 			TE_MORTAR = REGISTRATE.blockEntity("mortar", MortarBlockEntity::new).validBlock(MORTAR).renderer(() -> MortarRenderer::new).register();
+
+			BOARD = REGISTRATE.block("chopping_board", p -> DelegateBlock.newBaseBlock(wood,
+							BlockProxy.HORIZONTAL,
+							ChoppingBoardBlock.TE, new ChoppingBoardBlock(), CuisineUtil.ADD, CuisineUtil.DUMP))
+					.blockstate((ctx, pvd) -> pvd.horizontalBlock(ctx.getEntry(), new ModelFile.UncheckedModelFile(
+							new ResourceLocation(Cuisine.MODID, "block/chopping_board")), 90))
+					.tag(BlockTags.MINEABLE_WITH_AXE).simpleItem().register();
+
+			TE_BOARD = REGISTRATE.blockEntity("chopping_board", ChoppingBoardBlockEntity::new)
+					.validBlock(BOARD).renderer(() -> ChoppingBoardRenderer::new).register();
 		}
 		// fire pit
 		{
@@ -160,7 +175,7 @@ public class CuisineBlocks {
 	}
 
 	private static void makeFirePit(DataGenContext<Block, DelegateBlock> ctx, RegistrateBlockstateProvider pvd) {
-		ModelFile fire = new ModelFile.UncheckedModelFile(new ResourceLocation(Cuisine.MODID, "block/pan_lit"));
+		ModelFile fire = new ModelFile.UncheckedModelFile(new ResourceLocation(Cuisine.MODID, "block/fire"));
 		ModelFile base = new ModelFile.UncheckedModelFile(new ResourceLocation(Cuisine.MODID, "block/" + ctx.getName()));
 		MultiPartBlockStateBuilder builder = pvd.getMultipartBuilder(ctx.getEntry());
 		builder.part().modelFile(fire).addModel().condition(BlockStateProperties.LIT, true).end();

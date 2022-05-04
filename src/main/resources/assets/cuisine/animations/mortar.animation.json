@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+	"rotate": {
+	  "animation_length": 0.04167,
+	  "bones": {
+		"bone2": {
+		  "position": {
+			"0.0": {
+			  "vector": [
+				0,
+				0,
+				0
+			  ]
+			},
+			"0.0417": {
+			  "vector": [
+				-0.5,
+				2,
+				0.75
+			  ],
+			  "easing": "linear"
+			}
+		  }
+		}
+	  }
+	}
+  },
+  "geckolib_format_version": 2
+}

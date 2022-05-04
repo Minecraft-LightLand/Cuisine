@@ -16,7 +16,7 @@ public class InvResultHandler<T extends CuisineTile<T>> extends ResultHandler<T>
 
 	@Override
 	public boolean isEmpty() {
-		return tile.inventory.countSpace() > 0;
+		return tile.inventory.canAddWhileHaveSpace(ItemStack.EMPTY, 0);
 	}
 
 }

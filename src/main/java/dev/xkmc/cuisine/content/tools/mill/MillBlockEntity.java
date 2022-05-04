@@ -1,5 +1,7 @@
 package dev.xkmc.cuisine.content.tools.mill;
 
+import dev.xkmc.cuisine.content.tools.base.PauseableAnimationController;
+import dev.xkmc.cuisine.content.tools.base.tile.AnimatePauseTile;
 import dev.xkmc.l2library.base.BaseTank;
 import dev.xkmc.l2library.base.CombinedTankWrapper;
 import dev.xkmc.l2library.block.TickableBlockEntity;
@@ -30,12 +32,14 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 @SerialClass
-public class MillBlockEntity extends CuisineTile<MillBlockEntity> implements TickableBlockEntity, IAnimatable, StepTile {
+public class MillBlockEntity extends CuisineTile<MillBlockEntity> implements TickableBlockEntity, StepTile,
+		AnimatePauseTile {
 
 	public static final int MAX_FLUID = 1000, ROTATE_TIME = 20, ROTATE_ALLOW = 10;
 
 	private final AnimationFactory manager = new AnimationFactory(this);
 
+	@SerialClass.SerialField
 	protected int rotate_time;
 
 	@SerialClass.SerialField(toClient = true)
@@ -59,7 +63,7 @@ public class MillBlockEntity extends CuisineTile<MillBlockEntity> implements Tic
 
 	@Override
 	public void registerControllers(AnimationData data) {
-		MillAnimationController controller = new MillAnimationController(this);
+		PauseableAnimationController<MillBlockEntity> controller = new PauseableAnimationController<>(this);
 		data.addAnimationController(controller);
 	}
 
@@ -123,4 +127,8 @@ public class MillBlockEntity extends CuisineTile<MillBlockEntity> implements Tic
 		return super.getCapability(cap, side);
 	}
 
+	@Override
+	public int rotateTime() {
+		return rotate_time;
+	}
 }

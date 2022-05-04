@@ -1,9 +1,10 @@
 package dev.xkmc.cuisine.init.registrate;
 
-import dev.xkmc.l2library.repack.registrate.util.entry.ItemEntry;
 import dev.xkmc.cuisine.content.misc.CuisineBottleItem;
+import dev.xkmc.cuisine.content.misc.KnifeItem;
 import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.data.CuisineCropType;
+import dev.xkmc.l2library.repack.registrate.util.entry.ItemEntry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -35,6 +36,7 @@ public class CuisineItems {
 	public static final Tab TAB_MAIN = new Tab("cuisine", () -> CuisineCropType.CHILI::getSeed);
 
 	public static final ItemEntry<CuisineBottleItem> BOTTLE;
+	public static final ItemEntry<KnifeItem> KNIFE;
 
 	static {
 		SimpleItem.register();
@@ -58,6 +60,10 @@ public class CuisineItems {
 							.override().predicate(new ResourceLocation(Cuisine.MODID, "amount"), 0.9f).model(overrides[4]).end();
 				}).color(() -> () -> (stack, index) -> index == 0 ? CuisineBottleItem.getFluidColor(stack) : 0xFFFFFF)
 				.defaultLang().register();
+		KNIFE = REGISTRATE.item("kitchen_knife", p -> new KnifeItem(p.defaultDurability(128)))
+				.model((ctx, pvd) -> pvd.handheld(ctx)).defaultLang().register();
+
+
 		PlateItem.register();
 		ProcessedMeat.Meat.register();
 	}

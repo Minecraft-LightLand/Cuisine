@@ -1,7 +1,5 @@
 package dev.xkmc.cuisine.content.tools.basin;
 
-import dev.xkmc.l2library.block.TickableBlockEntity;
-import dev.xkmc.l2library.serial.SerialClass;
 import dev.xkmc.cuisine.content.tools.base.RecipeContainer;
 import dev.xkmc.cuisine.content.tools.base.handlers.StepHandler;
 import dev.xkmc.cuisine.content.tools.base.handlers.TimeHandler;
@@ -9,6 +7,8 @@ import dev.xkmc.cuisine.content.tools.base.tile.CuisineTankTile;
 import dev.xkmc.cuisine.content.tools.base.tile.StepTile;
 import dev.xkmc.cuisine.content.tools.base.tile.TimeTile;
 import dev.xkmc.cuisine.init.registrate.CuisineRecipes;
+import dev.xkmc.l2library.block.TickableBlockEntity;
+import dev.xkmc.l2library.serial.SerialClass;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -30,7 +30,8 @@ public class BasinBlockEntity extends CuisineTankTile<BasinBlockEntity> implemen
 	private boolean has_fire = false;
 
 	public BasinBlockEntity(BlockEntityType<BasinBlockEntity> type, BlockPos pos, BlockState state) {
-		super(type, pos, state, t -> new RecipeContainer<>(t, 8).setPredicate(stack -> t.inventory.countSpace() > 4).add(t),
+		super(type, pos, state, t -> new RecipeContainer<>(t, 8)
+						.setPredicate(stack -> t.inventory.canAddWhileHaveSpace(stack, 4)).add(t),
 				new FluidInfo(1, MAX_FLUID, 50));
 	}
 

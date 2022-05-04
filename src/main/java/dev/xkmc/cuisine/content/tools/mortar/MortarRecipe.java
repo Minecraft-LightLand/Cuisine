@@ -26,7 +26,7 @@ public class MortarRecipe extends CuisineRecipe<MortarRecipe, MortarBlockEntity>
 
 	@Override
 	public boolean matches(RecipeContainer<MortarBlockEntity> inv, Level world) {
-		if (!inv.canAddItem(result.copy()))
+		if (!inv.canRecipeAddItem(result.copy()))
 			return false;
 		for (ItemStack stack : inv.getAsList()) {
 			if (ingredient.test(stack)) {
