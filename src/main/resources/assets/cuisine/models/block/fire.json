@@ -5,7 +5,7 @@
 	32
   ],
   "textures": {
-	"1": "fire",
+	"1": "cuisine:block/fire",
 	"particle": "cuisine:block/iron"
   },
   "elements": [

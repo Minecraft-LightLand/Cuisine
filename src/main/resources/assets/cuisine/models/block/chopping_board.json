@@ -1,5 +1,6 @@
 {
   "credit": "Made with Blockbench",
+  "parent": "block/block",
   "texture_size": [
 	64,
 	64
@@ -318,89 +319,6 @@
 	  }
 	}
   ],
-  "display": {
-	"thirdperson_righthand": {
-	  "rotation": [
-		0,
-		90,
-		0
-	  ],
-	  "translation": [
-		0,
-		8,
-		0
-	  ]
-	},
-	"thirdperson_lefthand": {
-	  "rotation": [
-		0,
-		90,
-		0
-	  ],
-	  "translation": [
-		0,
-		8,
-		0
-	  ]
-	},
-	"firstperson_righthand": {
-	  "rotation": [
-		0,
-		-90,
-		0
-	  ],
-	  "translation": [
-		0,
-		8,
-		0
-	  ]
-	},
-	"firstperson_lefthand": {
-	  "rotation": [
-		0,
-		-90,
-		0
-	  ],
-	  "translation": [
-		0,
-		8,
-		0
-	  ]
-	},
-	"ground": {
-	  "translation": [
-		0,
-		4.5,
-		0
-	  ]
-	},
-	"gui": {
-	  "rotation": [
-		-90,
-		0,
-		0
-	  ]
-	},
-	"head": {
-	  "translation": [
-		0,
-		15,
-		0
-	  ]
-	},
-	"fixed": {
-	  "rotation": [
-		-90,
-		0,
-		0
-	  ],
-	  "translation": [
-		0,
-		0,
-		-8
-	  ]
-	}
-  },
   "groups": [
 	{
 	  "name": "bone",
