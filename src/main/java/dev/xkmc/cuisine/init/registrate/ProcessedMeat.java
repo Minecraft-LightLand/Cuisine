@@ -1,15 +1,17 @@
 package dev.xkmc.cuisine.init.registrate;
 
-import dev.xkmc.l2library.repack.registrate.util.entry.ItemEntry;
 import dev.xkmc.cuisine.init.Cuisine;
+import dev.xkmc.cuisine.init.data.CuisineModConfig;
 import dev.xkmc.cuisine.init.data.CuisineTags;
 import dev.xkmc.cuisine.init.data.CuisineTags.AllItemTags;
+import dev.xkmc.l2library.repack.registrate.util.entry.ItemEntry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
 import javax.annotation.Nullable;
 import java.util.Locale;
+import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 import static dev.xkmc.cuisine.init.Cuisine.REGISTRATE;
@@ -22,15 +24,26 @@ public class ProcessedMeat {
 		SHREDDED(AllItemTags.SHREDDED, MINCED, null),
 		SLICED(AllItemTags.SLICED, MINCED, SHREDDED),
 		DICED(AllItemTags.DICED, MINCED, null),
-		CUBED(AllItemTags.CUBED, DICED, SLICED);
+		CUBED(AllItemTags.CUBED, DICED, SLICED, CuisineModConfig.COMMON.cubeCut::get, CuisineModConfig.COMMON.cubeCut::get);
 
 		private final AllItemTags tag;
 		public final Process left, right;
+		public final IntSupplier left_count, right_count;
 
 		Process(AllItemTags tag, @Nullable Process left, @Nullable Process right) {
 			this.tag = tag;
 			this.left = left == null ? this : left;
 			this.right = right == null ? this : right;
+			this.left_count = () -> 1;
+			this.right_count = () -> 1;
+		}
+
+		Process(AllItemTags tag, @Nullable Process left, @Nullable Process right, IntSupplier l, IntSupplier r) {
+			this.tag = tag;
+			this.left = left == null ? this : left;
+			this.right = right == null ? this : right;
+			this.left_count = l;
+			this.right_count = r;
 		}
 
 		public String getName() {
@@ -39,22 +52,23 @@ public class ProcessedMeat {
 	}
 
 	public enum Meat {
-		CHICKEN(() -> Items.CHICKEN, 0xF2C9BD, AllItemTags.CHICKEN, AllItemTags.MEAT, AllItemTags.WHITE_MEAT),
-		PORK(() -> Items.PORKCHOP, 0xEF7070, AllItemTags.PORK, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.WHITE_MEAT),
-		BEEF(() -> Items.BEEF, 0xE03E35, AllItemTags.BEEF, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.RED_MEAT),
-		MUTTON(() -> Items.MUTTON, 0xE27269, AllItemTags.MUTTON, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.RED_MEAT),
-		RABBIT(() -> Items.RABBIT, 0xFEE5D2, AllItemTags.RABBIT, AllItemTags.MEAT, AllItemTags.WHITE_MEAT),
-		SALMON(() -> Items.SALMON, 0xAB3533, AllItemTags.SALMON, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.FISH, AllItemTags.SEAFOOD),
-		COD(() -> Items.COD, 0xD6C5AD, AllItemTags.COD, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.FISH, AllItemTags.SEAFOOD);
+		CHICKEN(() -> Items.CHICKEN, () -> Items.COOKED_CHICKEN, 0xF2C9BD, AllItemTags.CHICKEN, AllItemTags.MEAT, AllItemTags.WHITE_MEAT),
+		PORK(() -> Items.PORKCHOP, () -> Items.COOKED_PORKCHOP, 0xEF7070, AllItemTags.PORK, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.WHITE_MEAT),
+		BEEF(() -> Items.BEEF, () -> Items.COOKED_BEEF, 0xE03E35, AllItemTags.BEEF, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.RED_MEAT),
+		MUTTON(() -> Items.MUTTON, () -> Items.COOKED_MUTTON, 0xE27269, AllItemTags.MUTTON, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.RED_MEAT),
+		RABBIT(() -> Items.RABBIT, () -> Items.COOKED_RABBIT, 0xFEE5D2, AllItemTags.RABBIT, AllItemTags.MEAT, AllItemTags.WHITE_MEAT),
+		SALMON(() -> Items.SALMON, () -> Items.COOKED_SALMON, 0xAB3533, AllItemTags.SALMON, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.FISH, AllItemTags.SEAFOOD),
+		COD(() -> Items.COD, () -> Items.COOKED_COD, 0xD6C5AD, AllItemTags.COD, AllItemTags.MEAT, AllItemTags.GREASY, AllItemTags.FISH, AllItemTags.SEAFOOD);
 
-		public final Supplier<Item> original;
+		public final Supplier<Item> original, cooked;
 		public final int color;
 
 		public final ItemEntry<Item>[] items;
 
 		@SuppressWarnings("unchecked")
-		Meat(Supplier<Item> original, int color, AllItemTags... tags) {
+		Meat(Supplier<Item> original, Supplier<Item> cooked, int color, AllItemTags... tags) {
 			this.original = original;
+			this.cooked = cooked;
 			this.color = color;
 			items = new ItemEntry[Process.values().length];
 			for (Process process : Process.values()) {
@@ -68,7 +82,7 @@ public class ProcessedMeat {
 			return name().toLowerCase(Locale.ROOT);
 		}
 
-		public static void register(){
+		public static void register() {
 
 		}
 

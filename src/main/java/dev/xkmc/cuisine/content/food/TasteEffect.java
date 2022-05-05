@@ -1,14 +1,19 @@
-package dev.xkmc.cuisine.content.misc;
+package dev.xkmc.cuisine.content.food;
 
-import dev.xkmc.l2library.util.MathHelper;
 import dev.xkmc.cuisine.init.Cuisine;
+import dev.xkmc.cuisine.init.data.CuisineModConfig;
 import dev.xkmc.cuisine.util.DamageUtil;
+import dev.xkmc.l2library.effects.EffectUtil;
+import dev.xkmc.l2library.util.MathHelper;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import java.util.UUID;
 
@@ -46,13 +51,28 @@ public class TasteEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int lv) {
-		if (config.damage > 0) DamageUtil.dealDamage(entity, SOURCE, config.damage);
-		if (config.damage < 0) entity.heal(-config.damage);
+		if (entity instanceof Player player) {
+			if (player.getFoodData().getFoodLevel() < CuisineModConfig.COMMON.minHunger.get()) {
+				player.removeEffect(this);
+				return;
+			}
+			if (config.damage > 0) DamageUtil.dealDamage(entity, SOURCE, config.damage);
+			if (config.damage < 0) entity.heal(-config.damage);
+		}
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int tick, int lv) {
-		return config.period > 0 && tick % config.period == 0;
+		return tick % (config.period > 0 ? Math.min(20, config.period) : 20) == 0;
+	}
+
+	@SubscribeEvent
+	public static void onFinishUsingItem(LivingEntityUseItemEvent.Finish event) {
+		if (event.getEntityLiving() instanceof Player player) {
+			if (player.level.isClientSide)
+				return;
+			EffectUtil.removeEffect(player, e -> e.getEffect() instanceof TasteEffect);
+		}
 	}
 
 }

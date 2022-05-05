@@ -3,13 +3,12 @@ package dev.xkmc.cuisine.init;
 import dev.xkmc.cuisine.content.misc.CuisineBottleItem;
 import dev.xkmc.cuisine.content.tools.base.tile.TileInfoOverlay;
 import dev.xkmc.cuisine.content.veges.CornBlock;
-import dev.xkmc.cuisine.init.data.CuisineTags;
-import dev.xkmc.cuisine.init.data.LangData;
-import dev.xkmc.cuisine.init.data.RecipeGen;
-import dev.xkmc.cuisine.init.data.WoodType;
+import dev.xkmc.cuisine.init.data.*;
 import dev.xkmc.cuisine.init.registrate.*;
 import dev.xkmc.l2library.base.LcyRegistrate;
+import dev.xkmc.l2library.network.PacketHandlerWithConfig;
 import dev.xkmc.l2library.repack.registrate.providers.ProviderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.gui.ForgeIngameGui;
 import net.minecraftforge.client.gui.OverlayRegistry;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,11 +24,14 @@ public class Cuisine {
 
 	public static final String MODID = "cuisine";
 	public static final LcyRegistrate REGISTRATE = new LcyRegistrate(MODID);
+	public static final PacketHandlerWithConfig NETWORK = new PacketHandlerWithConfig(
+			new ResourceLocation(MODID, "main"), 1, "cuisine_config");
 
 	public Cuisine() {
 		CuisineBlocks.register();
 		CuisineItems.register();
 		CuisineFluids.register();
+		CuisineFlavor.register();
 		CuisineTags.register();
 		CuisineRecipes.register(FMLJavaModLoadingContext.get().getModEventBus());
 		REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::genLang);
@@ -43,6 +45,7 @@ public class Cuisine {
 
 	@SubscribeEvent
 	public static void onDataGen(GatherDataEvent event) {
+		event.getGenerator().addProvider(new CuisineConfigGen(event.getGenerator()));
 	}
 
 	@SubscribeEvent

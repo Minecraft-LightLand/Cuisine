@@ -1,5 +1,6 @@
 package dev.xkmc.cuisine.content.fruits;
 
+import dev.xkmc.cuisine.init.data.CuisineModConfig;
 import dev.xkmc.cuisine.init.data.CuisineTreeType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -66,7 +67,7 @@ public class CuisineLeaveBlock extends VanillaLeavesBlock implements Bonemealabl
 	public void randomTick(BlockState state, ServerLevel level, BlockPos pos, Random random) {
 		super.randomTick(state, level, pos, random);
 		if (state.getValue(CORE)) {
-			if (random.nextDouble() > 0.9) { // TODO put it in config
+			if (random.nextDouble() < CuisineModConfig.COMMON.leafGrowChance.get()) {
 				grow(level, random, pos, state, false);
 			}
 		}
@@ -92,7 +93,7 @@ public class CuisineLeaveBlock extends VanillaLeavesBlock implements Bonemealabl
 		if (age < 3) {
 			age = Math.min(3, age + (bonemeal ? random.nextInt(1, 3) : 1));
 			state = state.setValue(AGE, age);
-			if (age == 3 && bonemeal && random.nextDouble() > 0.9) // TODO config
+			if (age == 3 && bonemeal && random.nextDouble() < CuisineModConfig.COMMON.leafGrowChance.get())
 				state = state.setValue(CORE, false);
 			level.setBlockAndUpdate(pos, state);
 		} else {

@@ -3,6 +3,7 @@ package dev.xkmc.cuisine.content.tools.board;
 import com.mojang.datafixers.util.Pair;
 import dev.xkmc.cuisine.content.tools.base.RecipeContainer;
 import dev.xkmc.cuisine.content.tools.base.tile.CuisineTile;
+import dev.xkmc.cuisine.init.data.CuisineModConfig;
 import dev.xkmc.cuisine.init.registrate.ProcessedMeat;
 import dev.xkmc.l2library.serial.SerialClass;
 import net.minecraft.core.BlockPos;
@@ -35,12 +36,14 @@ public class ChoppingBoardBlockEntity extends CuisineTile<ChoppingBoardBlockEnti
 			ProcessedMeat.Meat meat = kind.get().getFirst();
 			Optional<ProcessedMeat.Process> process = kind.get().getSecond();
 			ProcessedMeat.Process next = ProcessedMeat.Process.CUBED;
+			int count = CuisineModConfig.COMMON.rawCut.get();
 			if (process.isPresent()) {
 				next = process.get().left;
+				count = process.get().left_count.getAsInt();
 			}
 			if (next != null) {
 				Item item = meat.items[next.ordinal()].get();
-				return tryProcess(stack, item);
+				return tryProcess(stack, item, count);
 			}
 		}
 		return false;
@@ -54,20 +57,23 @@ public class ChoppingBoardBlockEntity extends CuisineTile<ChoppingBoardBlockEnti
 			ProcessedMeat.Meat meat = kind.get().getFirst();
 			Optional<ProcessedMeat.Process> process = kind.get().getSecond();
 			ProcessedMeat.Process next = ProcessedMeat.Process.CUBED;
+			int count = CuisineModConfig.COMMON.rawCut.get();
 			if (process.isPresent()) {
 				next = process.get().right;
+				count = process.get().right_count.getAsInt();
 			}
 			if (next != null) {
 				Item item = meat.items[next.ordinal()].get();
-				return tryProcess(stack, item);
+				return tryProcess(stack, item, count);
 			}
 		}
 		return false;
 	}
 
-	private boolean tryProcess(ItemStack first, Item second) {
+	private boolean tryProcess(ItemStack first, Item second, int count) {
 		if (first.isEmpty()) return false;
-		if (inventory.addItem(new ItemStack(second, 1)).isEmpty()) {
+		if (inventory.canRecipeAddItem(new ItemStack(second ,count))) {
+			inventory.addItem(new ItemStack(second ,count));
 			first.shrink(1);
 			if (inventory.getItem(0).isEmpty()) {
 				ItemStack stack = inventory.getItem(1);
