@@ -1,0 +1,292 @@
+{
+  "_class": "dev.xkmc.cuisine.content.food.FoodConfig",
+  "map": {
+    "cuisine:diced_mutton": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:mutton"
+    },
+    "cuisine:minced_rabbit": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:rabbit"
+    },
+    "minecraft:mutton": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 6.0,
+      "cooked_saturation": 9.6,
+      "flavors": {
+        "cuisine:greasy": 2.0
+      },
+      "raw_hunger": 2.0,
+      "raw_saturation": 1.2
+    },
+    "cuisine:minced_pork": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:porkchop"
+    },
+    "cuisine:sliced_pork": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:porkchop"
+    },
+    "cuisine:shredded_cod": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:cod"
+    },
+    "cuisine:shredded_chicken": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:chicken"
+    },
+    "cuisine:minced_cod": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:cod"
+    },
+    "cuisine:cubed_rabbit": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:rabbit"
+    },
+    "cuisine:cubed_beef": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:beef"
+    },
+    "cuisine:cubed_salmon": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:salmon"
+    },
+    "cuisine:sliced_mutton": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:mutton"
+    },
+    "cuisine:paste_mutton": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:mutton"
+    },
+    "cuisine:cubed_chicken": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:chicken"
+    },
+    "cuisine:diced_pork": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:porkchop"
+    },
+    "cuisine:sliced_beef": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:beef"
+    },
+    "minecraft:porkchop": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 8.0,
+      "cooked_saturation": 12.8,
+      "flavors": {
+        "cuisine:greasy": 2.0
+      },
+      "raw_hunger": 3.0,
+      "raw_saturation": 1.8000001
+    },
+    "cuisine:paste_pork": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:porkchop"
+    },
+    "cuisine:diced_rabbit": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:rabbit"
+    },
+    "cuisine:diced_cod": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:cod"
+    },
+    "cuisine:sliced_chicken": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:chicken"
+    },
+    "cuisine:paste_rabbit": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:rabbit"
+    },
+    "cuisine:shredded_mutton": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:mutton"
+    },
+    "cuisine:paste_salmon": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:salmon"
+    },
+    "minecraft:cod": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 5.0,
+      "cooked_saturation": 6.0,
+      "flavors": {
+        "cuisine:greasy": 1.0
+      },
+      "raw_hunger": 2.0,
+      "raw_saturation": 0.4
+    },
+    "cuisine:shredded_rabbit": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:rabbit"
+    },
+    "cuisine:paste_beef": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:beef"
+    },
+    "cuisine:diced_salmon": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:salmon"
+    },
+    "cuisine:minced_chicken": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:chicken"
+    },
+    "cuisine:shredded_salmon": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:salmon"
+    },
+    "cuisine:cubed_cod": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:cod"
+    },
+    "cuisine:sliced_cod": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:cod"
+    },
+    "cuisine:minced_beef": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:beef"
+    },
+    "cuisine:cubed_mutton": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:mutton"
+    },
+    "minecraft:rabbit": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 5.0,
+      "cooked_saturation": 6.0,
+      "flavors": {
+        "cuisine:greasy": 1.0
+      },
+      "raw_hunger": 3.0,
+      "raw_saturation": 1.8000001
+    },
+    "cuisine:shredded_beef": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:beef"
+    },
+    "cuisine:paste_cod": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:cod"
+    },
+    "cuisine:sliced_rabbit": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:rabbit"
+    },
+    "cuisine:sliced_salmon": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:salmon"
+    },
+    "minecraft:chicken": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 6.0,
+      "cooked_saturation": 7.2000003,
+      "flavors": {
+        "cuisine:greasy": 1.0
+      },
+      "raw_hunger": 2.0,
+      "raw_saturation": 1.2
+    },
+    "cuisine:minced_salmon": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:salmon"
+    },
+    "minecraft:beef": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 8.0,
+      "cooked_saturation": 12.8,
+      "flavors": {
+        "cuisine:greasy": 2.0
+      },
+      "raw_hunger": 3.0,
+      "raw_saturation": 1.8000001
+    },
+    "cuisine:paste_chicken": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:chicken"
+    },
+    "cuisine:minced_mutton": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:mutton"
+    },
+    "cuisine:cubed_pork": {
+      "amount": 1.0,
+      "flavors": {},
+      "parent": "minecraft:porkchop"
+    },
+    "cuisine:diced_chicken": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:chicken"
+    },
+    "minecraft:salmon": {
+      "amount": 1.0,
+      "can_cook": true,
+      "cooked_hunger": 6.0,
+      "cooked_saturation": 9.6,
+      "flavors": {
+        "cuisine:greasy": 1.0
+      },
+      "raw_hunger": 2.0,
+      "raw_saturation": 0.4
+    },
+    "cuisine:diced_beef": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:beef"
+    },
+    "cuisine:shredded_pork": {
+      "amount": 0.5,
+      "flavors": {},
+      "parent": "minecraft:porkchop"
+    }
+  }
+}

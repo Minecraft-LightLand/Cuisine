@@ -82,8 +82,8 @@ b8f1a8dd5754634a7dbaee64bed75046fb0ea858 assets/cuisine/blockstates/turnip.json
 a6cece394c50b0f6aa23524695e063642f386590 assets/cuisine/blockstates/veges0.json
 0e15660d62015e3312c389c9c6290187464a227c assets/cuisine/blockstates/veges1.json
 0e94e346a73a587b006556eb5e2c6d5fb1775265 assets/cuisine/blockstates/wok.json
-02cb70159cabd134ea20f8122c22ff47a6317caa assets/cuisine/lang/en_ud.json
-bd9489339d3e4d0f8f1f762d6403cf1571d22532 assets/cuisine/lang/en_us.json
+4eaf241a10fce8f476d571ead77d23a00ec087c0 assets/cuisine/lang/en_ud.json
+e92ea02dd08c32f35f4ad62b0c05521416f0241b assets/cuisine/lang/en_us.json
 6bf266b5b9037968795605bdb9f428a56e405df7 assets/cuisine/models/block/chili_stage_0.json
 278fecbd5b23f0da77dfd552abb0be31e2229689 assets/cuisine/models/block/chili_stage_1.json
 ffc65b76dfa905e3478360d8ce6a5f88c69c77aa assets/cuisine/models/block/chili_stage_2.json
@@ -464,6 +464,7 @@ cb5a2605b3c86a071fc49c3da8be0598a6e50219 data/cuisine/advancements/recipes/jar/j
 94dc461b2dc2f540dc0359b9355fe5b369c760a0 data/cuisine/advancements/recipes/mortar/mortar/rice_powder.json
 356a0e202f7d7a684a3a00caa4e884e0bab951ec data/cuisine/advancements/recipes/mortar/mortar/sichuan_pepper_powder.json
 2703bf8a798d5dbb2e98c640b88da4456e9d854e data/cuisine/advancements/recipes/mortar/mortar/white_rice.json
+d75332a5c8dfc527fd5bc8a89950be2e5ba8349f data/cuisine/cuisine_config/meat.json
 edcc92341a52933903fbb14c452210b34a9f807e data/cuisine/loot_tables/blocks/basin.json
 ea30d64b105af4b233bc51b6212aa33e60e63a2c data/cuisine/loot_tables/blocks/chili.json
 a951a9bf83b1c74e859fb3454e4540cae5bf8cd6 data/cuisine/loot_tables/blocks/chinese_cabbage.json

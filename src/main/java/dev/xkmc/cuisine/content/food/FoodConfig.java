@@ -11,6 +11,7 @@ import java.util.*;
 @SerialClass
 public class FoodConfig extends BaseConfig {
 
+	@SerialClass.SerialField
 	public HashMap<ResourceLocation, FoodPropertyEntry> map = new HashMap<>();
 
 	private static Optional<FoodPropertyEntry> collect(ResourceLocation item) {
