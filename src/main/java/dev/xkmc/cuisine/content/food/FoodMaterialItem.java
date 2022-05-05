@@ -19,6 +19,6 @@ public class FoodMaterialItem extends Item {
 
 	@Override
 	public boolean isEdible() {
-		return FoodConfig.collectAll(this).isPresent();
+		return FoodConfig.collectAll(this).map(e -> e.raw_hunger * e.amount >= 1).orElse(false);
 	}
 }

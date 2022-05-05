@@ -27,8 +27,10 @@ public class FoodMaterialProperty {
 	public FoodProperties toFoodProperty(boolean raw, boolean meat) {
 		FoodProperties.Builder prop = new FoodProperties.Builder();
 		if (meat) prop.meat();
-		prop.nutrition((int) ((raw ? raw_hunger : cooked_hunger) * amount));
-		prop.saturationMod(raw ? raw_saturation / raw_hunger / 2 : cooked_saturation / cooked_hunger / 2);
+		int hunger = (int) ((raw ? raw_hunger : cooked_hunger) * amount);
+		prop.nutrition(hunger);
+		float sat = hunger == 0 ? 0 : (raw ? raw_saturation / 2 : cooked_saturation / 2) * amount / hunger;
+		prop.saturationMod(sat);
 		return prop.build();
 	}
 }
