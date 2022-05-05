@@ -1,7 +1,7 @@
 package dev.xkmc.cuisine.content.fruits;
 
 import dev.xkmc.cuisine.init.data.CuisineModConfig;
-import dev.xkmc.cuisine.init.data.CuisineTreeType;
+import dev.xkmc.cuisine.init.templates.CuisineTreeType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;

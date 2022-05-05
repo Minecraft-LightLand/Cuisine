@@ -4,7 +4,7 @@ import com.mojang.datafixers.util.Pair;
 import dev.xkmc.cuisine.content.tools.base.RecipeContainer;
 import dev.xkmc.cuisine.content.tools.base.tile.CuisineTile;
 import dev.xkmc.cuisine.init.data.CuisineModConfig;
-import dev.xkmc.cuisine.init.registrate.ProcessedMeat;
+import dev.xkmc.cuisine.init.templates.ProcessedMeat;
 import dev.xkmc.l2library.serial.SerialClass;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Item;

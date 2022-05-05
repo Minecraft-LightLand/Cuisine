@@ -1,4 +1,4 @@
-package dev.xkmc.cuisine.init.registrate;
+package dev.xkmc.cuisine.init.templates;
 
 import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntry;
 import dev.xkmc.cuisine.init.Cuisine;

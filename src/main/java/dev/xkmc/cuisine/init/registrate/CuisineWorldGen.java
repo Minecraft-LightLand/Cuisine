@@ -1,6 +1,6 @@
 package dev.xkmc.cuisine.init.registrate;
 
-import dev.xkmc.cuisine.init.data.CuisineTreeType;
+import dev.xkmc.cuisine.init.templates.CuisineTreeType;
 
 public class CuisineWorldGen {
 

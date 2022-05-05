@@ -4,7 +4,7 @@ import dev.xkmc.cuisine.content.food.FoodConfig;
 import dev.xkmc.cuisine.content.food.FoodPropertyEntry;
 import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.registrate.CuisineFlavor;
-import dev.xkmc.cuisine.init.registrate.ProcessedMeat;
+import dev.xkmc.cuisine.init.templates.ProcessedMeat;
 import dev.xkmc.l2library.network.BaseConfig;
 import dev.xkmc.l2library.network.ConfigDataProvider;
 import net.minecraft.data.DataGenerator;

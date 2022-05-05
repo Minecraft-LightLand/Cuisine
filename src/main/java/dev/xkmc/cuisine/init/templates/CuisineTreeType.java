@@ -1,5 +1,6 @@
-package dev.xkmc.cuisine.init.data;
+package dev.xkmc.cuisine.init.templates;
 
+import dev.xkmc.cuisine.init.data.CuisineTags;
 import dev.xkmc.l2library.repack.registrate.providers.DataGenContext;
 import dev.xkmc.l2library.repack.registrate.providers.RegistrateBlockstateProvider;
 import dev.xkmc.l2library.repack.registrate.providers.loot.RegistrateBlockLootTables;

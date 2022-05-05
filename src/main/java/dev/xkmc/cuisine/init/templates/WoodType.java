@@ -1,4 +1,4 @@
-package dev.xkmc.cuisine.init.data;
+package dev.xkmc.cuisine.init.templates;
 
 import com.mojang.datafixers.util.Pair;
 import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntry;

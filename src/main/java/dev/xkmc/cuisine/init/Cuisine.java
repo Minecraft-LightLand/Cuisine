@@ -5,6 +5,7 @@ import dev.xkmc.cuisine.content.tools.base.tile.TileInfoOverlay;
 import dev.xkmc.cuisine.content.veges.CornBlock;
 import dev.xkmc.cuisine.init.data.*;
 import dev.xkmc.cuisine.init.registrate.*;
+import dev.xkmc.cuisine.init.templates.WoodType;
 import dev.xkmc.l2library.base.LcyRegistrate;
 import dev.xkmc.l2library.network.PacketHandlerWithConfig;
 import dev.xkmc.l2library.repack.registrate.providers.ProviderType;

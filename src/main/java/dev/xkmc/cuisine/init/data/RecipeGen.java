@@ -1,5 +1,7 @@
 package dev.xkmc.cuisine.init.data;
 
+import dev.xkmc.cuisine.init.templates.CuisineCropType;
+import dev.xkmc.cuisine.init.templates.WoodType;
 import dev.xkmc.l2library.repack.registrate.providers.RegistrateRecipeProvider;
 import dev.xkmc.l2library.repack.registrate.util.DataIngredient;
 import dev.xkmc.cuisine.content.tools.basin.BasinDryRecipeBuilder;
@@ -11,7 +13,7 @@ import dev.xkmc.cuisine.content.tools.pan.PanRecipeBuilder;
 import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.registrate.CuisineBlocks;
 import dev.xkmc.cuisine.init.registrate.CuisineFluids;
-import dev.xkmc.cuisine.init.registrate.SimpleItem;
+import dev.xkmc.cuisine.init.templates.SimpleItem;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;

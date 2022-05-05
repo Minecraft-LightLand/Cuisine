@@ -1,5 +1,6 @@
-package dev.xkmc.cuisine.init.registrate;
+package dev.xkmc.cuisine.init.templates;
 
+import dev.xkmc.cuisine.content.food.FoodMaterialItem;
 import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.data.CuisineModConfig;
 import dev.xkmc.cuisine.init.data.CuisineTags;
@@ -63,7 +64,7 @@ public class ProcessedMeat {
 		public final Supplier<Item> original, cooked;
 		public final int color;
 
-		public final ItemEntry<Item>[] items;
+		public final ItemEntry<FoodMaterialItem>[] items;
 
 		@SuppressWarnings("unchecked")
 		Meat(Supplier<Item> original, Supplier<Item> cooked, int color, AllItemTags... tags) {
@@ -72,7 +73,7 @@ public class ProcessedMeat {
 			this.color = color;
 			items = new ItemEntry[Process.values().length];
 			for (Process process : Process.values()) {
-				items[process.ordinal()] = REGISTRATE.item(process.getName() + "_" + getName(), Item::new)
+				items[process.ordinal()] = REGISTRATE.item(process.getName() + "_" + getName(), FoodMaterialItem::new)
 						.model((ctx, pvd) -> pvd.generated(ctx, new ResourceLocation(Cuisine.MODID, "item/" + process.getName())))
 						.color(() -> () -> (stack, layer) -> color).tag(CuisineTags.map(process.tag, tags)).register();
 			}

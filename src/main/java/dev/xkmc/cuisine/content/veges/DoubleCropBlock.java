@@ -1,6 +1,6 @@
 package dev.xkmc.cuisine.content.veges;
 
-import dev.xkmc.cuisine.init.data.CuisineCropType;
+import dev.xkmc.cuisine.init.templates.CuisineCropType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
