@@ -34,7 +34,10 @@
     },
     "cuisine:shredded_cod": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:cod"
     },
     "cuisine:shredded_chicken": {
@@ -44,7 +47,10 @@
     },
     "cuisine:minced_cod": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:cod"
     },
     "cuisine:cubed_rabbit": {
@@ -59,7 +65,10 @@
     },
     "cuisine:cubed_salmon": {
       "amount": 1.0,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:salmon"
     },
     "cuisine:sliced_mutton": {
@@ -110,7 +119,10 @@
     },
     "cuisine:diced_cod": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:cod"
     },
     "cuisine:sliced_chicken": {
@@ -130,7 +142,10 @@
     },
     "cuisine:paste_salmon": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:salmon"
     },
     "minecraft:cod": {
@@ -156,7 +171,10 @@
     },
     "cuisine:diced_salmon": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:salmon"
     },
     "cuisine:minced_chicken": {
@@ -166,17 +184,26 @@
     },
     "cuisine:shredded_salmon": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:salmon"
     },
     "cuisine:cubed_cod": {
       "amount": 1.0,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:cod"
     },
     "cuisine:sliced_cod": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:cod"
     },
     "cuisine:minced_beef": {
@@ -207,7 +234,10 @@
     },
     "cuisine:paste_cod": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:cod"
     },
     "cuisine:sliced_rabbit": {
@@ -217,7 +247,10 @@
     },
     "cuisine:sliced_salmon": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:salmon"
     },
     "minecraft:chicken": {
@@ -233,7 +266,10 @@
     },
     "cuisine:minced_salmon": {
       "amount": 0.5,
-      "flavors": {},
+      "flavors": {
+        "cuisine:fishy": 2.0,
+        "cuisine:tasty": 1.0
+      },
       "parent": "minecraft:salmon"
     },
     "minecraft:beef": {

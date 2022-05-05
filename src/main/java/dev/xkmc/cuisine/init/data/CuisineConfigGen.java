@@ -55,8 +55,12 @@ public class CuisineConfigGen extends ConfigDataProvider {
 			base.map.put(ori.getRegistryName(), entry);
 			for (ProcessedMeat.Process process : ProcessedMeat.Process.values()) {
 				float amount = process == ProcessedMeat.Process.CUBED ? 1f : 0.5f;
-				base.map.put(meat.items[process.ordinal()].get().getRegistryName(),
-						new FoodPropertyEntry().setAmount(amount).setParent(ori.getRegistryName()));
+				FoodPropertyEntry ent = new FoodPropertyEntry().setAmount(amount).setParent(ori.getRegistryName());
+				if (meat == ProcessedMeat.Meat.COD || meat == ProcessedMeat.Meat.SALMON) {
+					ent.flavors.put(CuisineFlavor.FISHY.get(), 2f);
+					ent.flavors.put(CuisineFlavor.TASTY.get(), 1f);
+				}
+				base.map.put(meat.items[process.ordinal()].get().getRegistryName(), ent);
 			}
 		}
 	}

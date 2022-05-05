@@ -1,0 +1,64 @@
+{
+  "_class": "dev.xkmc.cuisine.content.food.FoodConfig",
+  "map": {
+    "cuisine:citron": {
+      "amount": 1.0,
+      "can_cook": false,
+      "cooked_hunger": 0.0,
+      "cooked_saturation": 0.0,
+      "flavors": {
+        "cuisine:sour": 2.0,
+        "cuisine:greasy": -1.0
+      },
+      "raw_hunger": 1.0,
+      "raw_saturation": 0.6
+    },
+    "cuisine:chili": {
+      "amount": 1.0,
+      "can_cook": false,
+      "cooked_hunger": 0.0,
+      "cooked_saturation": 0.0,
+      "flavors": {
+        "cuisine:greasy": -0.5,
+        "cuisine:sweet": -2.0
+      },
+      "raw_hunger": 1.0,
+      "raw_saturation": 0.6
+    },
+    "cuisine:corn": {
+      "amount": 1.0,
+      "can_cook": false,
+      "cooked_hunger": 0.0,
+      "cooked_saturation": 0.0,
+      "flavors": {
+        "cuisine:greasy": -0.5
+      },
+      "raw_hunger": 4.0,
+      "raw_saturation": 4.8
+    },
+    "cuisine:chinese_cabbage": {
+      "amount": 1.0,
+      "can_cook": false,
+      "cooked_hunger": 0.0,
+      "cooked_saturation": 0.0,
+      "flavors": {
+        "cuisine:greasy": -1.0
+      },
+      "raw_hunger": 2.0,
+      "raw_saturation": 1.2
+    },
+    "cuisine:mandarin": {
+      "amount": 1.0,
+      "can_cook": false,
+      "cooked_hunger": 0.0,
+      "cooked_saturation": 0.0,
+      "flavors": {
+        "cuisine:sour": 1.0,
+        "cuisine:greasy": -1.0,
+        "cuisine:sweet": 1.0
+      },
+      "raw_hunger": 1.0,
+      "raw_saturation": 0.6
+    }
+  }
+}

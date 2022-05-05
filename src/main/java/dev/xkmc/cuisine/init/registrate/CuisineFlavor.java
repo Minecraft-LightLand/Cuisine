@@ -1,9 +1,6 @@
 package dev.xkmc.cuisine.init.registrate;
 
-import dev.xkmc.cuisine.content.flavor.Flavor;
-import dev.xkmc.cuisine.content.flavor.SourFlavor;
-import dev.xkmc.cuisine.content.flavor.TastyFlavor;
-import dev.xkmc.cuisine.content.flavor.SweetFlavor;
+import dev.xkmc.cuisine.content.flavor.*;
 import dev.xkmc.cuisine.content.food.TasteEffect;
 import dev.xkmc.l2library.repack.registrate.builders.NoConfigBuilder;
 import dev.xkmc.l2library.repack.registrate.util.entry.RegistryEntry;
@@ -47,12 +44,13 @@ public class CuisineFlavor {
 	));
 
 	public static final RegistryEntry<SweetFlavor> SWEET = REGISTRATE.generic(Flavor.class, "sweet", SweetFlavor::new).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> SALTY = REGISTRATE.generic(Flavor.class, "salty", TastyFlavor::new).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> GREASY = REGISTRATE.generic(Flavor.class, "greasy", TastyFlavor::new).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> SALTY = REGISTRATE.generic(Flavor.class, "salty", () -> new TastyFlavor(1.5, 0.6, 3)).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> GREASY = REGISTRATE.generic(Flavor.class, "greasy", () -> new TastyFlavor(1, 0.6, 3)).defaultLang().register();
 	public static final RegistryEntry<SourFlavor> SOUR = REGISTRATE.generic(Flavor.class, "sour", SourFlavor::new).defaultLang().register();
-	public static final RegistryEntry<Flavor> FISHY = REGISTRATE.generic(Flavor.class, "fishy", Flavor::new).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> SMELLY = REGISTRATE.generic(Flavor.class, "smelly", TastyFlavor::new).defaultLang().register();
-	public static final RegistryEntry<Flavor> NUMB = REGISTRATE.generic(Flavor.class, "numb", Flavor::new).defaultLang().register();
+	public static final RegistryEntry<FishyFlavor> FISHY = REGISTRATE.generic(Flavor.class, "fishy", FishyFlavor::new).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> TASTY = REGISTRATE.generic(Flavor.class, "tasty", () -> new TastyFlavor(1, 0.6, 0.6)).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> SMELLY = REGISTRATE.generic(Flavor.class, "smelly", () -> new TastyFlavor(1, 0.6, 0.6)).defaultLang().register();
+	public static final RegistryEntry<NumbFlavor> NUMB = REGISTRATE.generic(Flavor.class, "numb", NumbFlavor::new).defaultLang().register();
 
 	public static void register() {
 
