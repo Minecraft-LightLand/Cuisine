@@ -34,6 +34,7 @@ public class Cuisine {
 		CuisineFluids.register();
 		CuisineFlavor.register();
 		CuisineTags.register();
+		CuisineModConfig.init();
 		CuisineRecipes.register(FMLJavaModLoadingContext.get().getModEventBus());
 		REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::genLang);
 		REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeGen::genRecipe);
