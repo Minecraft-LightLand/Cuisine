@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.1'
+version = '0.0.2'
 group = 'dev.xkmc.cuisine' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'cuisine'
 
