@@ -28,6 +28,16 @@ public class FoodPropertyEntry {
 
 	}
 
+	public FoodPropertyEntry setDefault() {
+		raw_hunger = 0f;
+		raw_saturation = 0f;
+		can_cook = false;
+		cooked_hunger = 0f;
+		cooked_saturation = 0f;
+		amount = 1f;
+		return this;
+	}
+
 	public FoodPropertyEntry setRawHunger(float raw_hunger) {
 		this.raw_hunger = raw_hunger;
 		return this;
