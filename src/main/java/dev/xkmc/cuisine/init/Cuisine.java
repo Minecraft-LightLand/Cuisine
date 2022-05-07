@@ -24,7 +24,7 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 public class Cuisine {
 
 	public static final String MODID = "cuisine";
-	public static final LcyRegistrate REGISTRATE = new LcyRegistrate(MODID);
+	public static final CuisineRegistrate REGISTRATE = new CuisineRegistrate(MODID);
 	public static final PacketHandlerWithConfig NETWORK = new PacketHandlerWithConfig(
 			new ResourceLocation(MODID, "main"), 1, "cuisine_config");
 

@@ -43,15 +43,15 @@ public class CuisineFlavor {
 			new TasteEffect.Attribs(Attributes.KNOCKBACK_RESISTANCE, AttributeModifier.Operation.ADDITION, 0.1f)
 	));
 
-	public static final RegistryEntry<SweetFlavor> SWEET = REGISTRATE.generic(Flavor.class, "sweet", SweetFlavor::new).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> SWEET_SPICY = REGISTRATE.generic(Flavor.class, "sweet_spicy", () -> new TastyFlavor(1, 0.6, 0.6)).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> SALTY = REGISTRATE.generic(Flavor.class, "salty", () -> new TastyFlavor(1.5, 0.6, 3)).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> GREASY = REGISTRATE.generic(Flavor.class, "greasy", () -> new TastyFlavor(1, 0.6, 3)).defaultLang().register();
-	public static final RegistryEntry<SourFlavor> SOUR = REGISTRATE.generic(Flavor.class, "sour", SourFlavor::new).defaultLang().register();
-	public static final RegistryEntry<FishyFlavor> FISHY = REGISTRATE.generic(Flavor.class, "fishy", FishyFlavor::new).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> TASTY = REGISTRATE.generic(Flavor.class, "tasty", () -> new TastyFlavor(1, 0.6, 0.6)).defaultLang().register();
-	public static final RegistryEntry<TastyFlavor> SMELLY = REGISTRATE.generic(Flavor.class, "smelly", () -> new TastyFlavor(1, 0.6, 0.6)).defaultLang().register();
-	public static final RegistryEntry<NumbFlavor> NUMB = REGISTRATE.generic(Flavor.class, "numb", NumbFlavor::new).defaultLang().register();
+	public static final RegistryEntry<SweetFlavor> SWEET = REGISTRATE.flavor("sweet", SweetFlavor::new).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> SWEET_SPICY = REGISTRATE.flavor("sweet_spicy", () -> new TastyFlavor(0.6, "sweet_spicy")).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> SALTY = REGISTRATE.flavor("salty", () -> new TastyFlavor(1.5, 0.6, 3, "no_salt", "salty", "too_salty")).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> GREASY = REGISTRATE.flavor("greasy", () -> new TastyFlavor(1, 0.6, 3, "no_oil", "greasy", "too_greasy")).defaultLang().register();
+	public static final RegistryEntry<SourFlavor> SOUR = REGISTRATE.flavor("sour", SourFlavor::new).defaultLang().register();
+	public static final RegistryEntry<FishyFlavor> FISHY = REGISTRATE.flavor("fishy", FishyFlavor::new).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> TASTY = REGISTRATE.flavor("tasty", () -> new TastyFlavor(0.6, "tasty")).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> SMELLY = REGISTRATE.flavor("smelly", () -> new TastyFlavor(0.6, "smelly")).defaultLang().register();
+	public static final RegistryEntry<NumbFlavor> NUMB = REGISTRATE.flavor("numb", NumbFlavor::new).defaultLang().register();
 
 	public static void register() {
 
