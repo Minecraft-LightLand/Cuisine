@@ -72,4 +72,9 @@ public class FoodPropertyEntry {
 		this.parent = parent;
 		return this;
 	}
+
+	public FoodPropertyEntry put(Flavor f, float v){
+		flavors.put(f, v);
+		return this;
+	}
 }

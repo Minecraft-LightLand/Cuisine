@@ -69,45 +69,43 @@ public class CuisineConfigGen extends ConfigDataProvider {
 		// 相对饱和：金萝卜=1.2，肉类=0.8，主食=0.6，蔬菜=0.3
 		{
 			// 添加蔬菜食物属性，样板：玉米
-			FoodPropertyEntry corn = new FoodPropertyEntry(); // 创建食物属性
-			corn.setDefault().setRawHunger(4f).setRawSaturationMod(0.6f); // 生食，4饱食，0.6相对饱和(1.2/0.8/0.6/0.3)
-			corn.flavors.put(CuisineFlavor.GREASY.get(), -0.5f); // 减少0.5点油腻
-			base.map.put(CuisineCropType.CORN.entry.get().asItem().getRegistryName(), corn); // 注册
+			base.map.put(CuisineCropType.CORN.getSeed().getRegistryName(), new FoodPropertyEntry() //  注册创建食物属性
+					.setDefault().setRawHunger(4f).setRawSaturationMod(0.6f) // 生食，4饱食，0.6相对饱和(1.2/0.8/0.6/0.3)
+					.put(CuisineFlavor.GREASY.get(), -0.5f)); // 减少0.5点油腻
+
 		}
 		{
 			// 样板：辣椒
-			FoodPropertyEntry chili = new FoodPropertyEntry();
-			chili.setDefault().setRawHunger(1f).setRawSaturationMod(0.3f);
-			chili.flavors.put(CuisineFlavor.GREASY.get(), -0.5f);
-			chili.flavors.put(CuisineFlavor.SWEET.get(), -2f); // 辣是负的甜
-			base.map.put(CuisineCropType.CHILI.entry.get().asItem().getRegistryName(), chili);
+			base.map.put(CuisineCropType.CHILI.getSeed().getRegistryName(), new FoodPropertyEntry()
+					.setDefault().setRawHunger(1f).setRawSaturationMod(0.3f)
+					.put(CuisineFlavor.GREASY.get(), -0.5f)
+					.put(CuisineFlavor.SWEET.get(), -2f));// 辣是负的甜
 		}
 		{
 			// 白菜
-			FoodPropertyEntry ch_cab = new FoodPropertyEntry();
-			ch_cab.setDefault().setRawHunger(2f).setRawSaturationMod(0.3f);
-			ch_cab.flavors.put(CuisineFlavor.GREASY.get(), -1f);
-			base.map.put(CuisineCropType.CHINESE_CABBAGE.entry.get().asItem().getRegistryName(), ch_cab);
+			base.map.put(CuisineCropType.CHINESE_CABBAGE.getSeed().getRegistryName(), new FoodPropertyEntry()
+					.setDefault().setRawHunger(2f).setRawSaturationMod(0.3f)
+					.put(CuisineFlavor.GREASY.get(), -1f));
 		}
 		// 剩余的蔬菜
-		CuisineCropType.CUCUMBER.entry.get().asItem().getRegistryName();
-		CuisineCropType.EGGPLANT.entry.get().asItem().getRegistryName();
-		CuisineCropType.GARLIC.entry.get().asItem().getRegistryName();
-		CuisineCropType.GINGER.entry.get().asItem().getRegistryName();
-		CuisineCropType.GREEN_PEPPER.entry.get().asItem().getRegistryName();
-		CuisineCropType.LEEK.entry.get().asItem().getRegistryName();
-		CuisineCropType.LETTUCE.entry.get().asItem().getRegistryName();
-		CuisineCropType.ONION.entry.get().asItem().getRegistryName();
-		CuisineCropType.PEANUT.entry.get().asItem().getRegistryName();
-		CuisineCropType.RED_PEPPER.entry.get().asItem().getRegistryName();
-		CuisineCropType.RICE.entry.get().asItem().getRegistryName();
-		CuisineCropType.SCALLION.entry.get().asItem().getRegistryName();
-		CuisineCropType.SESAME.entry.get().asItem().getRegistryName();
-		CuisineCropType.SICHUAN_PEPPER.entry.get().asItem().getRegistryName();
-		CuisineCropType.SOYBEAN.entry.get().asItem().getRegistryName();
-		CuisineCropType.SPINACH.entry.get().asItem().getRegistryName();
-		CuisineCropType.TOMATO.entry.get().asItem().getRegistryName();
-		CuisineCropType.TURNIP.entry.get().asItem().getRegistryName();
+		CuisineCropType.CUCUMBER.getSeed().getRegistryName();
+		CuisineCropType.EGGPLANT.getSeed().getRegistryName();
+		CuisineCropType.GARLIC.getSeed().getRegistryName();
+		CuisineCropType.GINGER.getSeed().getRegistryName();
+		CuisineCropType.GREEN_PEPPER.getSeed().getRegistryName();
+		CuisineCropType.LEEK.getSeed().getRegistryName();
+		CuisineCropType.LETTUCE.getSeed().getRegistryName();
+		CuisineCropType.ONION.getSeed().getRegistryName();
+		CuisineCropType.PEANUT.getSeed().getRegistryName();
+		CuisineCropType.RED_PEPPER.getSeed().getRegistryName();
+		CuisineCropType.RICE.getSeed().getRegistryName();
+		CuisineCropType.SCALLION.getSeed().getRegistryName();
+		CuisineCropType.SESAME.getSeed().getRegistryName();
+		CuisineCropType.SICHUAN_PEPPER.getSeed().getRegistryName();
+		CuisineCropType.SOYBEAN.getSeed().getRegistryName();
+		CuisineCropType.SPINACH.getSeed().getRegistryName();
+		CuisineCropType.TOMATO.getSeed().getRegistryName();
+		CuisineCropType.TURNIP.getSeed().getRegistryName();
 		Items.POTATO.getRegistryName();
 		Items.BEETROOT.getRegistryName();
 		Items.CARROT.getRegistryName();
@@ -122,19 +120,17 @@ public class CuisineConfigGen extends ConfigDataProvider {
 
 		// 水果
 		{
-			FoodPropertyEntry citron = new FoodPropertyEntry();
-			citron.setDefault().setRawHunger(1f).setRawSaturationMod(0.3f);
-			citron.flavors.put(CuisineFlavor.GREASY.get(), -1f);
-			citron.flavors.put(CuisineFlavor.SOUR.get(), 2f);
-			base.map.put(CuisineTreeType.CITRON.fruit.get().getRegistryName(), citron);
+			base.map.put(CuisineTreeType.CITRON.fruit.get().getRegistryName(), new FoodPropertyEntry()
+					.setDefault().setRawHunger(1f).setRawSaturationMod(0.3f)
+					.put(CuisineFlavor.GREASY.get(), -1f)
+					.put(CuisineFlavor.SOUR.get(), 2f));
 		}
 		{
-			FoodPropertyEntry mandarin = new FoodPropertyEntry();
-			mandarin.setDefault().setRawHunger(1f).setRawSaturationMod(0.3f);
-			mandarin.flavors.put(CuisineFlavor.GREASY.get(), -1f);
-			mandarin.flavors.put(CuisineFlavor.SWEET.get(), 1f);
-			mandarin.flavors.put(CuisineFlavor.SOUR.get(), 1f);
-			base.map.put(CuisineTreeType.MANDARIN.fruit.get().getRegistryName(), mandarin);
+			base.map.put(CuisineTreeType.MANDARIN.fruit.get().getRegistryName(), new FoodPropertyEntry()
+					.setDefault().setRawHunger(1f).setRawSaturationMod(0.3f)
+					.put(CuisineFlavor.GREASY.get(), -1f)
+					.put(CuisineFlavor.SWEET.get(), 1f)
+					.put(CuisineFlavor.SOUR.get(), 1f));
 		}
 		// 剩余的水果
 		CuisineTreeType.GRAPEFRUIT.fruit.get().getRegistryName();
