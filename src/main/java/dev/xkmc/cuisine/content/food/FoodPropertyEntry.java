@@ -10,17 +10,17 @@ import java.util.HashMap;
 public class FoodPropertyEntry {
 
 	@SerialClass.SerialField
-	public Float raw_hunger, raw_saturation;
+	public Double raw_hunger, raw_saturation;
 	@SerialClass.SerialField
 	public Boolean can_cook;
 	@SerialClass.SerialField
-	public Float cooked_hunger, cooked_saturation;
+	public Double cooked_hunger, cooked_saturation;
 	@SerialClass.SerialField
-	public Float amount;
+	public Double amount;
 	@SerialClass.SerialField
 	public ResourceLocation parent;
 	@SerialClass.SerialField
-	public HashMap<Flavor, Float> flavors = new HashMap<>();
+	public HashMap<Flavor, Double> flavors = new HashMap<>();
 
 	FoodMaterialProperty cache;
 
@@ -29,21 +29,21 @@ public class FoodPropertyEntry {
 	}
 
 	public FoodPropertyEntry setDefault() {
-		raw_hunger = 0f;
-		raw_saturation = 0f;
+		raw_hunger = 0d;
+		raw_saturation = 0d;
 		can_cook = false;
-		cooked_hunger = 0f;
-		cooked_saturation = 0f;
-		amount = 1f;
+		cooked_hunger = 0d;
+		cooked_saturation = 0d;
+		amount = 1d;
 		return this;
 	}
 
-	public FoodPropertyEntry setRawHunger(float raw_hunger) {
+	public FoodPropertyEntry setRawHunger(double raw_hunger) {
 		this.raw_hunger = raw_hunger;
 		return this;
 	}
 
-	public FoodPropertyEntry setRawSaturationMod(float raw_saturation) {
+	public FoodPropertyEntry setRawSaturationMod(double raw_saturation) {
 		this.raw_saturation = raw_hunger * raw_saturation * 2;
 		return this;
 	}
@@ -53,17 +53,17 @@ public class FoodPropertyEntry {
 		return this;
 	}
 
-	public FoodPropertyEntry setCookedHunger(float cooked_hunger) {
+	public FoodPropertyEntry setCookedHunger(double cooked_hunger) {
 		this.cooked_hunger = cooked_hunger;
 		return this;
 	}
 
-	public FoodPropertyEntry setCookedSaturationMod(float cooked_saturation) {
+	public FoodPropertyEntry setCookedSaturationMod(double cooked_saturation) {
 		this.cooked_saturation = cooked_hunger * cooked_saturation * 2;
 		return this;
 	}
 
-	public FoodPropertyEntry setAmount(float amount) {
+	public FoodPropertyEntry setAmount(double amount) {
 		this.amount = amount;
 		return this;
 	}
@@ -73,7 +73,7 @@ public class FoodPropertyEntry {
 		return this;
 	}
 
-	public FoodPropertyEntry put(Flavor f, float v){
+	public FoodPropertyEntry put(Flavor f, double v){
 		flavors.put(f, v);
 		return this;
 	}

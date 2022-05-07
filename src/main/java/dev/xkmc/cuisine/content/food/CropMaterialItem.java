@@ -2,11 +2,11 @@ package dev.xkmc.cuisine.content.food;
 
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.Nullable;
 
-import static dev.xkmc.cuisine.content.food.FoodMaterialItem.getFoodPropertiesHook;
-import static dev.xkmc.cuisine.content.food.FoodMaterialItem.isEdibleHook;
+import static dev.xkmc.cuisine.content.food.FoodMaterialItem.*;
 
 public class CropMaterialItem extends BlockItem {
 
@@ -18,6 +18,11 @@ public class CropMaterialItem extends BlockItem {
 	@Override
 	public FoodProperties getFoodProperties() {
 		return getFoodPropertiesHook(this);
+	}
+
+	@Override
+	public int getUseDuration(ItemStack stack) {
+		return getUseDurationHook(this, stack);
 	}
 
 	@Override

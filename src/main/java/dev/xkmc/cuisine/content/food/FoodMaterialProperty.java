@@ -7,12 +7,12 @@ import java.util.HashMap;
 
 public class FoodMaterialProperty {
 
-	public float raw_hunger, raw_saturation;
+	public double raw_hunger, raw_saturation;
 	public boolean can_cook;
-	public float cooked_hunger, cooked_saturation;
-	public float amount;
+	public double cooked_hunger, cooked_saturation;
+	public double amount;
 
-	public HashMap<Flavor, Float> flavors = new HashMap<>();
+	public HashMap<Flavor, Double> flavors = new HashMap<>();
 
 	public void merge(FoodPropertyEntry pop) {
 		if (pop.raw_hunger != null) raw_hunger = pop.raw_hunger;
@@ -29,8 +29,14 @@ public class FoodMaterialProperty {
 		if (meat) prop.meat();
 		int hunger = (int) ((raw ? raw_hunger : cooked_hunger) * amount);
 		prop.nutrition(hunger);
-		float sat = hunger == 0 ? 0 : (raw ? raw_saturation / 2 : cooked_saturation / 2) * amount / hunger;
-		prop.saturationMod(sat);
+		double sat = hunger == 0 ? 0 : (raw ? raw_saturation / 2 : cooked_saturation / 2) * amount / hunger;
+		prop.saturationMod((float) sat);
+		flavors.forEach((k, v) -> k.getEffectInstance(v).ifPresent(e -> prop.effect(() -> e, 1)));
 		return prop.build();
 	}
+
+	public boolean isEdible() {
+		return raw_hunger * amount >= 1;
+	}
+
 }

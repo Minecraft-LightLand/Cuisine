@@ -3,14 +3,26 @@ package dev.xkmc.cuisine.content.flavor;
 import dev.xkmc.cuisine.content.food.TasteEffect;
 import dev.xkmc.cuisine.init.registrate.CuisineFlavor;
 import dev.xkmc.l2library.base.NamedEntry;
+import dev.xkmc.l2library.effects.EffectBuilder;
+import dev.xkmc.l2library.effects.EffectProperties;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffectInstance;
 
 import java.util.Optional;
 import java.util.function.Consumer;
 
 public abstract class Flavor extends NamedEntry<Flavor> {
+
+	public static final EffectProperties PROP = new EffectProperties();
+
+	static {
+		PROP.noCounter = true;
+		PROP.showIcon = true;
+		PROP.visible = false;
+		PROP.ambient = false;
+	}
 
 	public Flavor() {
 		super(CuisineFlavor.FLAVOR);
@@ -47,4 +59,8 @@ public abstract class Flavor extends NamedEntry<Flavor> {
 		return "flavor." + getRegistryName().getNamespace() + "." + str;
 	}
 
+	public Optional<MobEffectInstance> getEffectInstance(double v) {
+		return getEffect(v).map(e -> new EffectBuilder(e).setAmplifier(0).setDuration(12000)
+				.setAmbient(false).setVisible(false).setNoCounter(true).setShowIcon(true).ins);
+	}
 }
