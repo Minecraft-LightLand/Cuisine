@@ -1,5 +1,6 @@
 package dev.xkmc.cuisine.init;
 
+import dev.xkmc.cuisine.content.food.FoodMaterialItem;
 import dev.xkmc.cuisine.content.misc.CuisineBottleItem;
 import dev.xkmc.cuisine.content.tools.base.tile.TileInfoOverlay;
 import dev.xkmc.cuisine.content.veges.CornBlock;
@@ -39,10 +40,11 @@ public class Cuisine {
 		REGISTRATE.addDataGenerator(ProviderType.LANG, LangData::genLang);
 		REGISTRATE.addDataGenerator(ProviderType.RECIPE, RecipeGen::genRecipe);
 
-		MinecraftForge.EVENT_BUS.register(CornBlock.class);
-		MinecraftForge.EVENT_BUS.register(CuisineBottleItem.class);
 		FMLJavaModLoadingContext.get().getModEventBus().register(Cuisine.class);
 		FMLJavaModLoadingContext.get().getModEventBus().register(CuisineRendering.class);
+		MinecraftForge.EVENT_BUS.register(CornBlock.class);
+		MinecraftForge.EVENT_BUS.register(CuisineBottleItem.class);
+		MinecraftForge.EVENT_BUS.register(FoodMaterialItem.class);
 	}
 
 	@SubscribeEvent

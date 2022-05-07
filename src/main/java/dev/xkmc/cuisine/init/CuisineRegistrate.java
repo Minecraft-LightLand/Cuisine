@@ -37,7 +37,12 @@ public class CuisineRegistrate extends LcyRegistrate {
 		}
 
 		public FlavorBuilder<T> defaultLang() {
-			return this.setData(ProviderType.LANG, (ctx, prov) -> ctx.get().fillLang(s -> prov.add(s, RegistrateLangProvider.toEnglishName(s))));
+			return this.setData(ProviderType.LANG, (ctx, prov) -> ctx.get().fillLang(s -> prov.add(s, toEnglish(s))));
+		}
+
+		private static String toEnglish(String id) {
+			String[] strs = id.split("\\.");
+			return RegistrateLangProvider.toEnglishName(strs[strs.length - 1]);
 		}
 
 	}

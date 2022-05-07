@@ -1,5 +1,6 @@
 package dev.xkmc.cuisine.init.templates;
 
+import dev.xkmc.cuisine.content.food.FoodMaterialItem;
 import dev.xkmc.cuisine.init.data.CuisineTags;
 import dev.xkmc.l2library.repack.registrate.providers.DataGenContext;
 import dev.xkmc.l2library.repack.registrate.providers.RegistrateBlockstateProvider;
@@ -59,12 +60,12 @@ public enum CuisineTreeType {
 	public final BlockEntry<CuisineLeaveBlock> leave;
 	public final BlockEntry<SaplingBlock> sapling;
 
-	public final ItemEntry<Item> fruit;
+	public final ItemEntry<FoodMaterialItem> fruit;
 
 	CuisineTreeType(String fruit_type, int color, CuisineTags.AllItemTags... tags) {
 		this.fruit_type = new ResourceLocation(Cuisine.MODID, "block/fruit_" + fruit_type);
 		this.color = color;
-		this.fruit = REGISTRATE.item(getName(), Item::new).tag(CuisineTags.map(tags)).register();
+		this.fruit = REGISTRATE.item(getName(), FoodMaterialItem::new).tag(CuisineTags.map(tags)).register();
 		this.leave = REGISTRATE.block("leaves_" + getName(), p -> new CuisineLeaveBlock(this,
 						BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).randomTicks().noCollission()))
 				.blockstate(this::blockstate).loot(this::loot).addLayer(() -> RenderType::cutoutMipped)

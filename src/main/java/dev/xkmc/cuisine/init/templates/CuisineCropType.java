@@ -1,15 +1,16 @@
 package dev.xkmc.cuisine.init.templates;
 
+import dev.xkmc.cuisine.content.food.CropMaterialItem;
+import dev.xkmc.cuisine.content.veges.CornBlock;
+import dev.xkmc.cuisine.content.veges.CuisineCropBlock;
+import dev.xkmc.cuisine.content.veges.DoubleCropBlock;
+import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.data.CuisineTags;
 import dev.xkmc.l2library.repack.registrate.providers.DataGenContext;
 import dev.xkmc.l2library.repack.registrate.providers.RegistrateBlockstateProvider;
 import dev.xkmc.l2library.repack.registrate.providers.loot.RegistrateBlockLootTables;
 import dev.xkmc.l2library.repack.registrate.util.entry.BlockEntry;
 import dev.xkmc.l2library.util.LootTableTemplate;
-import dev.xkmc.cuisine.content.veges.CornBlock;
-import dev.xkmc.cuisine.content.veges.CuisineCropBlock;
-import dev.xkmc.cuisine.content.veges.DoubleCropBlock;
-import dev.xkmc.cuisine.init.Cuisine;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -80,7 +81,7 @@ public enum CuisineCropType {
 
 		entry = REGISTRATE.block(getName(), this::createBlock)
 				.addLayer(() -> RenderType::cutout).blockstate(this::generate).loot(this::loot)
-				.item().tag(CuisineTags.map(tags))
+				.item(CropMaterialItem::new).tag(CuisineTags.map(tags))
 				.defaultModel().build().defaultLang().register();
 	}
 

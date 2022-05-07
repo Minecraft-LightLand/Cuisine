@@ -7,8 +7,8 @@
       "cooked_hunger": 0.0,
       "cooked_saturation": 0.0,
       "flavors": {
-        "cuisine:greasy": -1.0,
-        "cuisine:sour": 2.0
+        "cuisine:sour": 2.0,
+        "cuisine:greasy": -1.0
       },
       "raw_hunger": 1.0,
       "raw_saturation": 0.6
@@ -54,8 +54,8 @@
       "cooked_saturation": 0.0,
       "flavors": {
         "cuisine:sweet": 1.0,
-        "cuisine:greasy": -1.0,
-        "cuisine:sour": 1.0
+        "cuisine:sour": 1.0,
+        "cuisine:greasy": -1.0
       },
       "raw_hunger": 1.0,
       "raw_saturation": 0.6

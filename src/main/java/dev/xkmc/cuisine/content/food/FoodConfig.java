@@ -1,6 +1,7 @@
 package dev.xkmc.cuisine.content.food;
 
 import dev.xkmc.cuisine.init.Cuisine;
+import dev.xkmc.cuisine.init.data.CuisineTags;
 import dev.xkmc.l2library.network.BaseConfig;
 import dev.xkmc.l2library.serial.SerialClass;
 import net.minecraft.resources.ResourceLocation;
@@ -20,6 +21,7 @@ public class FoodConfig extends BaseConfig {
 	}
 
 	public static Optional<FoodMaterialProperty> collectAll(Item item) {
+		if (!CuisineTags.AllItemTags.CAN_COOK.matches(item)) return Optional.empty();
 		Optional<FoodPropertyEntry> entry = collect(Objects.requireNonNull(item.getRegistryName()));
 		if (entry.isEmpty()) return Optional.empty();
 		if (entry.get().cache != null) {

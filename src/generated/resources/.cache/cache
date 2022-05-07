@@ -82,8 +82,8 @@ b8f1a8dd5754634a7dbaee64bed75046fb0ea858 assets/cuisine/blockstates/turnip.json
 a6cece394c50b0f6aa23524695e063642f386590 assets/cuisine/blockstates/veges0.json
 0e15660d62015e3312c389c9c6290187464a227c assets/cuisine/blockstates/veges1.json
 0e94e346a73a587b006556eb5e2c6d5fb1775265 assets/cuisine/blockstates/wok.json
-29efd90027ebbcad1f83fb017a9b84637992f9e8 assets/cuisine/lang/en_ud.json
-1cf35458a40fc6dff983405a74621b7bbf937e21 assets/cuisine/lang/en_us.json
+ba83b3475a0e269623e25348e0ec6e902223d507 assets/cuisine/lang/en_ud.json
+08beb954ea435c7ceab6e5985e2ecc6bf648dad5 assets/cuisine/lang/en_us.json
 6bf266b5b9037968795605bdb9f428a56e405df7 assets/cuisine/models/block/chili_stage_0.json
 278fecbd5b23f0da77dfd552abb0be31e2229689 assets/cuisine/models/block/chili_stage_1.json
 ffc65b76dfa905e3478360d8ce6a5f88c69c77aa assets/cuisine/models/block/chili_stage_2.json
@@ -466,7 +466,7 @@ cb5a2605b3c86a071fc49c3da8be0598a6e50219 data/cuisine/advancements/recipes/jar/j
 2703bf8a798d5dbb2e98c640b88da4456e9d854e data/cuisine/advancements/recipes/mortar/mortar/white_rice.json
 b217f6975d184dd63bae362f1aab802a82ad79d7 data/cuisine/cuisine_config/meat.json
 071df9707c9c6800fa1725145bfa7ebe5f6dee7d data/cuisine/cuisine_config/misc.json
-2222fc36046f61037589444fac3aab1b657ec4e0 data/cuisine/cuisine_config/veges.json
+474d392c63518d2ab5116602bacc2d89d248ff92 data/cuisine/cuisine_config/veges.json
 edcc92341a52933903fbb14c452210b34a9f807e data/cuisine/loot_tables/blocks/basin.json
 ea30d64b105af4b233bc51b6212aa33e60e63a2c data/cuisine/loot_tables/blocks/chili.json
 a951a9bf83b1c74e859fb3454e4540cae5bf8cd6 data/cuisine/loot_tables/blocks/chinese_cabbage.json

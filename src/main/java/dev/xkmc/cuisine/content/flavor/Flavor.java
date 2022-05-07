@@ -3,6 +3,8 @@ package dev.xkmc.cuisine.content.flavor;
 import dev.xkmc.cuisine.content.food.TasteEffect;
 import dev.xkmc.cuisine.init.registrate.CuisineFlavor;
 import dev.xkmc.l2library.base.NamedEntry;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 
 import java.util.Optional;
@@ -34,8 +36,11 @@ public abstract class Flavor extends NamedEntry<Flavor> {
 		fillLangImpl(e -> cons.accept(parse(e)));
 	}
 
-	public Optional<TranslatableComponent> getDescriptionByAmount(double amount) {
-		return getDisplayIdByAmount(amount).map(e -> new TranslatableComponent(parse(e)));
+	public Optional<Component> getDescriptionByAmount(double amount) {
+		double factor = getTastyFactor(amount);
+		return getDisplayIdByAmount(amount).map(e -> new TranslatableComponent(parse(e)).withStyle(
+				factor < 1 ? ChatFormatting.GREEN : factor > 1 ? ChatFormatting.RED : ChatFormatting.WHITE
+		));
 	}
 
 	private String parse(String str) {

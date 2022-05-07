@@ -1,0 +1,109 @@
+{
+  "block.cuisine": {
+	"chili": "辣椒",
+	"chinese_cabbage": "大白菜",
+	"corn": "玉米",
+	"cucumber": "黄瓜",
+	"eggplant": "茄子",
+	"garlic": "大蒜",
+	"ginger": "姜",
+	"green_pepper": "青椒",
+	"leek": "韭菜",
+	"lettuce": "生菜",
+	"onion": "洋葱",
+	"peanut": "花生",
+	"red_pepper": "红椒",
+	"rice": "水稻",
+	"scallion": "葱",
+	"sesame": "芝麻",
+	"sichuan_pepper": "花椒",
+	"soybean": "大豆",
+	"spinach": "菠菜",
+	"tomato": "西红柿",
+	"turnip": "白萝卜"
+  },
+  "item.cuisine": {
+	"empowered_boat": "充能木船",
+	"fruittree_boat": "柑橘木船",
+	"mystic_boat": "世界木船",
+
+	"citron": "香橼",
+	"grapefruit": "西柚",
+	"lemon": "柠檬",
+	"lime": "酸橙",
+	"mandarin": "橘子",
+	"orange": "甜橙",
+	"pomelo": "柚子"
+  },
+  "entity.cuisine": {
+	"empowered_boat": "充能木船",
+	"fruittree_boat": "柑橘木船",
+	"mystic_boat": "世界木船"
+  },
+  "-cartesian": {
+	"-wood_blocks": {
+	  "path": "block.cuisine",
+	  "list": [
+		{
+		  "empowered": "充能木",
+		  "fruittree": "柑橘木",
+		  "mystic": "世界木"
+		},
+		{
+		  "button": "按钮",
+		  "door": "门",
+		  "fence": "栅栏",
+		  "fence_gate": "栅栏门",
+		  "log": "原木",
+		  "planks": "木板",
+		  "pressure_plate": "压力板",
+		  "slab": "半砖",
+		  "stairs": "台阶",
+		  "trapdoor": "活板门"
+		}
+	  ]
+	},
+	"-tree_blocks": {
+	  "path": "block.cuisine",
+	  "reverse": true,
+	  "list": [
+		{
+		  "leaves": "树叶",
+		  "sapling": "树苗"
+		},
+		{
+		  "citron": "香橼",
+		  "grapefruit": "西柚",
+		  "lemon": "柠檬",
+		  "lime": "酸橙",
+		  "mandarin": "橘子",
+		  "orange": "甜橙",
+		  "pomelo": "柚子"
+		}
+	  ]
+	},
+	"-meat": {
+	  "path": "item.cuisine",
+	  "reverse": true,
+	  "list": [
+		{
+		  "cubed": "块",
+		  "sliced": "片",
+		  "shredded": "丝",
+		  "diced": "丁",
+		  "minced": "馅",
+		  "paste": "酱"
+		},
+		{
+		  "chicken": "鸡肉",
+		  "pork": "猪肉",
+		  "beef": "牛肉",
+		  "mutton": "羊肉",
+		  "rabbit": "兔肉",
+		  "salmon": "三文鱼",
+		  "cod": "鳕鱼"
+		}
+	  ]
+	}
+  }
+}

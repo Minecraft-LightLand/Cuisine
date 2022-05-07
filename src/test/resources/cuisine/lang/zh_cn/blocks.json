@@ -1,0 +1,24 @@
+{
+  "block.cuisine": {
+	"basin": "盆",
+	"jar": "罐子",
+	"mill": "磨",
+	"mortar": "臼",
+	"pan": "炖锅",
+	"fire_pit": "火塘",
+	"fire_pit_with_sticks": "火塘与烧烤架",
+	"fire_pit_with_wok": "火塘与炒锅",
+	"wok": "炒锅",
+	"chopping_board": "菜板"
+  },
+  "fluid.cuisine": {
+	"cuisine_juice": "果汁",
+	"edible_oil": "食用油",
+	"fruit_vinegar": "果醋",
+	"rice_vinegar": "米醋",
+	"sesame_oil": "香油",
+	"soy_milk": "豆浆",
+	"soy_sauce": "酱油",
+	"sugarcane_juice": "甘蔗汁"
+  }
+}
