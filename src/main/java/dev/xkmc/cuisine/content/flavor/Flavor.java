@@ -60,7 +60,7 @@ public abstract class Flavor extends NamedEntry<Flavor> {
 	}
 
 	public Optional<MobEffectInstance> getEffectInstance(double v) {
-		return getEffect(v).map(e -> new EffectBuilder(e).setAmplifier(0).setDuration(12000)
+		return getEffect(v).map(e -> new EffectBuilder(e).setAmplifier(0).setDuration(TasteEffect.DURATION)
 				.setAmbient(false).setVisible(false).setNoCounter(true).setShowIcon(true).ins);
 	}
 }

@@ -36,6 +36,8 @@ public class TasteEffect extends MobEffect {
 	public record Config(MobEffectCategory category, int color, int period, int damage, Attribs... attribs) {
 	}
 
+	public static final int DURATION = 24 * 60 * 60 * 20;
+
 	public static final DamageSource SOURCE = new DamageSource("food_poison");
 
 	private final Config config;
@@ -71,7 +73,7 @@ public class TasteEffect extends MobEffect {
 		if (event.getEntityLiving() instanceof Player player) {
 			if (player.level.isClientSide)
 				return;
-			EffectUtil.removeEffect(player, e -> e.getEffect() instanceof TasteEffect);
+			EffectUtil.removeEffect(player, e -> e.getEffect() instanceof TasteEffect && e.getDuration() < DURATION);
 		}
 	}
 

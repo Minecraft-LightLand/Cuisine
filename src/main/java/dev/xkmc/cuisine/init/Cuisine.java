@@ -1,6 +1,7 @@
 package dev.xkmc.cuisine.init;
 
 import dev.xkmc.cuisine.content.food.FoodMaterialItem;
+import dev.xkmc.cuisine.content.food.TasteEffect;
 import dev.xkmc.cuisine.content.misc.CuisineBottleItem;
 import dev.xkmc.cuisine.content.tools.base.tile.TileInfoOverlay;
 import dev.xkmc.cuisine.content.veges.CornBlock;
@@ -45,6 +46,7 @@ public class Cuisine {
 		MinecraftForge.EVENT_BUS.register(CornBlock.class);
 		MinecraftForge.EVENT_BUS.register(CuisineBottleItem.class);
 		MinecraftForge.EVENT_BUS.register(FoodMaterialItem.class);
+		MinecraftForge.EVENT_BUS.register(TasteEffect.class);
 	}
 
 	@SubscribeEvent
