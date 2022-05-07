@@ -20,4 +20,8 @@ public class Flavor extends NamedEntry<Flavor> {
 		return Optional.empty();
 	}
 
+	public Optional<Flavor> getCancellationFlavor(){
+		return Optional.empty();
+	}
+
 }

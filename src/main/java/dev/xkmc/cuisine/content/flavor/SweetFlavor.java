@@ -19,4 +19,9 @@ public class SweetFlavor extends Flavor {
 				amount >= 1 ? amount >= 2 ? Optional.empty() : Optional.of(CuisineFlavor.EFF_SWEET.get()) :
 						Optional.empty();
 	}
+
+	@Override
+	public Optional<Flavor> getCancellationFlavor() {
+		return Optional.of(CuisineFlavor.SWEET_SPICY.get());
+	}
 }

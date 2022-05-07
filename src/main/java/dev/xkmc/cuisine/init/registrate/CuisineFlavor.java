@@ -44,6 +44,7 @@ public class CuisineFlavor {
 	));
 
 	public static final RegistryEntry<SweetFlavor> SWEET = REGISTRATE.generic(Flavor.class, "sweet", SweetFlavor::new).defaultLang().register();
+	public static final RegistryEntry<TastyFlavor> SWEET_SPICY = REGISTRATE.generic(Flavor.class, "sweet_spicy", () -> new TastyFlavor(1, 0.6, 0.6)).defaultLang().register();
 	public static final RegistryEntry<TastyFlavor> SALTY = REGISTRATE.generic(Flavor.class, "salty", () -> new TastyFlavor(1.5, 0.6, 3)).defaultLang().register();
 	public static final RegistryEntry<TastyFlavor> GREASY = REGISTRATE.generic(Flavor.class, "greasy", () -> new TastyFlavor(1, 0.6, 3)).defaultLang().register();
 	public static final RegistryEntry<SourFlavor> SOUR = REGISTRATE.generic(Flavor.class, "sour", SourFlavor::new).defaultLang().register();
