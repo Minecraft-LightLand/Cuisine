@@ -1,7 +1,7 @@
 package dev.xkmc.cuisine.init.data;
 
-import dev.xkmc.cuisine.content.food.FoodConfig;
-import dev.xkmc.cuisine.content.food.FoodPropertyEntry;
+import food.FoodConfig;
+import food.FoodPropertyEntry;
 import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.registrate.CuisineFlavor;
 import dev.xkmc.cuisine.init.templates.CuisineCropType;

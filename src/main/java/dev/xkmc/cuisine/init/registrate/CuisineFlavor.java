@@ -1,7 +1,7 @@
 package dev.xkmc.cuisine.init.registrate;
 
 import dev.xkmc.cuisine.content.flavor.*;
-import dev.xkmc.cuisine.content.food.TasteEffect;
+import food.TasteEffect;
 import dev.xkmc.l2library.repack.registrate.builders.NoConfigBuilder;
 import dev.xkmc.l2library.repack.registrate.util.entry.RegistryEntry;
 import dev.xkmc.l2library.repack.registrate.util.nullness.NonNullSupplier;

@@ -1,6 +1,6 @@
 package dev.xkmc.cuisine.content.flavor;
 
-import dev.xkmc.cuisine.content.food.TasteEffect;
+import food.TasteEffect;
 import dev.xkmc.cuisine.init.registrate.CuisineFlavor;
 
 import java.util.Optional;

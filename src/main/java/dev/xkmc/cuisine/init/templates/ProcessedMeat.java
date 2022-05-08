@@ -1,6 +1,6 @@
 package dev.xkmc.cuisine.init.templates;
 
-import dev.xkmc.cuisine.content.food.FoodMaterialItem;
+import food.FoodMaterialItem;
 import dev.xkmc.cuisine.init.Cuisine;
 import dev.xkmc.cuisine.init.data.CuisineModConfig;
 import dev.xkmc.cuisine.init.data.CuisineTags;

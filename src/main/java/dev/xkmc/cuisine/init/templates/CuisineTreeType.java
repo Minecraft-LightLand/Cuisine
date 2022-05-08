@@ -1,6 +1,6 @@
 package dev.xkmc.cuisine.init.templates;
 
-import dev.xkmc.cuisine.content.food.FoodMaterialItem;
+import food.FoodMaterialItem;
 import dev.xkmc.cuisine.init.data.CuisineTags;
 import dev.xkmc.l2library.repack.registrate.providers.DataGenContext;
 import dev.xkmc.l2library.repack.registrate.providers.RegistrateBlockstateProvider;
@@ -16,7 +16,6 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;

@@ -1,7 +1,7 @@
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
 
-package dev.xkmc.cuisine.content.food;
+package food;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 

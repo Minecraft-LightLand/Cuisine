@@ -1,6 +1,6 @@
 package dev.xkmc.cuisine.init.templates;
 
-import dev.xkmc.cuisine.content.food.CropMaterialItem;
+import food.CropMaterialItem;
 import dev.xkmc.cuisine.content.veges.CornBlock;
 import dev.xkmc.cuisine.content.veges.CuisineCropBlock;
 import dev.xkmc.cuisine.content.veges.DoubleCropBlock;

@@ -1,4 +1,4 @@
-package dev.xkmc.cuisine.content.food;
+package food;
 
 import dev.xkmc.cuisine.content.flavor.Flavor;
 import dev.xkmc.cuisine.init.data.CuisineTags;
